@@ -1,0 +1,38 @@
+# .config/compton.conf
+
+backend = "glx";
+paint-on-overlay = true;
+glx-no-stencil = true;
+glx-no-rebind-pixmap = true;
+unredir-if-possible = true;
+vsync = "opengl-swc";
+
+
+# Shadows
+shadow = true;
+no-dock-shadow = true;
+no-dnd-shadow = true;
+clear-shadow = true;
+shadow-radius = 14;
+shadow-ignore-shaped = true;
+
+
+# Opacity
+menu-opacity = 0.90;
+inactive-opacity = 0.90;
+inactive-opacity-override = true;
+alpha-step = 0.06
+
+detect-client-opacity = true;
+
+
+# Fading
+fading = true;
+fade-delta = 2;
+fade-in-step = 0.05;
+fade-out-step = 0.05;
+
+wintypes: {
+    tooltip = { fade = true; shadow = false; opacity = 1.00; focus = true; };
+};
+
