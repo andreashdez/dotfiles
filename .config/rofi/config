@@ -9,8 +9,7 @@ rofi.scroll-method:     1
 
 ! Theming
 
-!rofi.bw:                4
-rofi.font:              Droid Sans Mono Slashed for Powerline Regular 20
+rofi.font:              Meslo LG S for Powerline 20
 
 !                       bg       fg       altbg    hlbg     hlfg
 rofi.color-normal:      #282828, #ebdbb2, #282828, #ebdbb2, #282828
@@ -25,9 +24,7 @@ rofi.hide-scrollbar:    true
 
 ! Layout
 
-!rofi.lines:             5
-!rofi.width:             32
-rofi.padding:		912
+rofi.padding:		900
 rofi.fullscreen:        true
 rofi.auto-select:       true
 rofi.dpi:               200

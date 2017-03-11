@@ -1,8 +1,8 @@
 # .config/termite/config
 
 [options]
-font = Droid Sans Mono Slashed for Powerline Regular 11
-
+#font = Droid Sans Mono Slashed for Powerline Regular 11
+font = Meslo LG S for Powerline 11
 browser = google-chrome-stable
 
 resize_grip = false

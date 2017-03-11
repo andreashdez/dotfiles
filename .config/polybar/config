@@ -14,7 +14,7 @@ line-size = 2
 module-margin-left = 3
 padding = 2
 
-font-0 = Droid Sans Mono Slashed for Powerline:size=20;4
+font-0 = Meslo LG S for Powerline:size=20;4
 font-1 = Noto Emoji:size=20;4
 font-2 = FontAwesome:size=20;4
 

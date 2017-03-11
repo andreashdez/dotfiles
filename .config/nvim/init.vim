@@ -4,7 +4,9 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'lervag/vimtex'
 Plug 'morhetz/gruvbox'
+Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
@@ -19,7 +21,7 @@ call plug#end()
 let g:airline_section=''
 let g:airline_detect_paste=1
 let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled=1
+""let g:airline#extensions#tabline#enabled=1
 
 
 " Syntastic stuff
@@ -30,13 +32,13 @@ set statusline+=%*
 
 " Syntastic configuration
 let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
+""let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 
 
 " NerdTree toggle
-nmap <silent><C-s> :NERDTreeTabsToggle<CR>
+map <C-m> :NERDTreeTabsToggle<CR>
 
 
 " Gruvbox configuration
@@ -70,8 +72,8 @@ set hidden
 " Show line length
 set textwidth=79
 set nowrap
-set colorcolumn=80
-highlight ColorColumn ctermbg=233
+""set colorcolumn=80
+""highlight ColorColumn ctermbg=233
 
 
 " Auto remove all trailing whitespace on :w
@@ -80,7 +82,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Line Numbers
 set number
-set numberwidth=5
+set numberwidth=3
 
 
 " TAB configuration

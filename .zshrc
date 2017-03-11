@@ -1,6 +1,6 @@
 export TERM=xterm-256color
 export ANDROID_HOME=/opt/android-sdk/
-export PATH=${PATH}:~/.android-sdk/platform-tools:/~/.android-sdk/tools
+export PATH=${PATH}:~/.android-sdk/platform-tools:/~/.android-sdk/tools:/opt/cuda/bin
 export EDITOR=nvim
 
 source ~/.zplug/init.zsh
