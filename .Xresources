@@ -9,12 +9,12 @@ Xft.lcdfilter:  lcddefault
 
 ! colors
 *cursorColor:  #ebdbb2
-! hard contrast: *background: #1d2021
+! Background: Black (hard contrast)
 *background: #1d2021
-! soft contrast: *background: #32302f
+! Foreground: White
 *foreground: #ebdbb2
 ! Black + DarkGrey
-*color0:  #282828
+*color0:  #1d2021
 *color8:  #928374
 ! DarkRed + Red
 *color1:  #cc241d
