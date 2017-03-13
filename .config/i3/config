@@ -33,12 +33,11 @@ exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 
 
 # System font
-#font pango: Droid Sans Mono Slashed for Powerline Regular 10
 font pango: Meslo LG S for Powerline 10
+
 
 # Colours from Xresources
 set_from_resource $black       color0
-set_from_resource $darkblack   background
 set_from_resource $darkred     color1
 set_from_resource $red         color9
 set_from_resource $darkgreen   color2
@@ -174,7 +173,7 @@ bindsym $mod+Shift+p resize grow width 40 px or 2 ppt
 
 
 # System commands
-set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
+set $mode_system System: (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id ~/.config/i3/i3exit lock, mode "default"
     bindsym e exec --no-startup-id ~/.config/i3/i3exit logout, mode "default"
@@ -201,8 +200,8 @@ bindsym --release Shift+Print exec --no-startup-id scrot -s ~/Pictures/Screensho
 # Window colors
 #                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
 client.focused          $black      $black      $white      $darkwhite  $darkwhite
-client.unfocused        $black      $black      $darkwhite  $darkblack  $darkblack
-client.focused_inactive $black      $black      $darkwhite  $darkblack  $darkblack
+client.unfocused        $black      $black      $darkwhite  $black      $black
+client.focused_inactive $black      $black      $darkwhite  $black      $black
 client.urgent           $darkred    $darkred    $black      $darkred    $darkred
 client.background       $black
 
