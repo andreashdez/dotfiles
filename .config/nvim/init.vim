@@ -104,11 +104,19 @@ set sidescrolloff=16
 set sidescroll=1
 
 
-" HTML editing
-set matchpairs+=<:>
-
-
 " Move between buffers
 nnoremap <C-k> :bp<CR>
 nnoremap <C-j> :bn<CR>
+
+
+" Editing shortcuts
+"inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
+
+
+" HTML editing
+"set matchpairs+=<:>
+
+"autocmd FileType html inoremap ;p <p></p><Enter><Enter><++><Esc>2ki
+"autocmd FileType html inoremap ;i <em></em><Space><++><Esc>FeF<i
+"autocmd FileType html inoremap ;b <b></b><Space><++><Esc>FbF<i
 

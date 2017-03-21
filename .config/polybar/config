@@ -18,9 +18,9 @@ font-0 = Meslo LG S for Powerline:size=20;4
 font-1 = Noto Emoji:size=20;4
 font-2 = FontAwesome:size=20;4
 
-modules-left = i3
+modules-left = i3 bspwm
 modules-center =
-modules-right = volume backlight wlan filesystem battery date
+modules-right = volume backlight keyboard wlan filesystem battery date
 
 
 ; MODULES
@@ -55,6 +55,35 @@ label-urgent-underline = #fb4934
 label-urgent-padding = 2
 
 
+[module/bspwm]
+type = internal/bspwm
+
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = X;
+ws-icon-default = 
+
+label-focused = %icon%
+label-focused-background = #cc000000
+label-focused-underline = #ebdbb2
+label-focused-padding = 2
+
+label-occupied = %icon%
+label-occupied-background = #cc000000
+label-occupied-foreground = #a89984
+label-occupied-padding = 1
+
+label-urgent = %icon%
+label-urgent-foreground = #fb4934
+label-urgent-underline = #fb4934
+label-urgent-padding = 1
+
+label-empty = %icon%
+label-empty-foreground = #a89984
+label-empty-padding = 1
+
+
 [module/date]
 type = internal/date
 interval = 5
@@ -75,12 +104,14 @@ adapter = AC
 poll-interval = 5
 time-format = %H:%M
 
-format-charging = <animation-charging> <label-charging>
+format-charging = <ramp-capacity> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
 
-label-charging = Charging %percentage%% %time%
-label-discharging = Discharging %percentage%% (%time%)
+label-charging = %percentage%% (%time%)
+label-charging-foreground = #b8bb26
+label-discharging = %percentage%% (%time%)
+label-discharging-foreground = #fabd2f
 label-full = %percentage%%
 
 ramp-capacity-0 = 
@@ -88,13 +119,6 @@ ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-framerate = 750
 
 
 [module/backlight]
@@ -118,8 +142,8 @@ format-volume = <ramp-volume> <label-volume>
 format-muted = <label-muted>
 
 label-volume = %percentage%%
-label-muted = 🔇 muted
-label-muted-foreground = #aaa
+label-muted = 🔇 -
+label-muted-foreground = #928374
 
 ramp-volume-0 = 🔈
 ramp-volume-1 = 🔉
@@ -137,7 +161,7 @@ format-unmounted = <label-unmounted>
 
 label-mounted =  %free%
 label-unmounted =  -
-label-unmounted-foreground = #aaa
+label-unmounted-foreground = #928374
 
 
 [module/wlan]
@@ -150,5 +174,13 @@ format-disconnected = <label-disconnected>
 
 label-connected =  %signal%%
 label-disconnected =  -
-label-disconnected-foreground = #aaa
+label-disconnected-foreground = #928374
+
+
+[module/keyboard]
+type = internal/xkeyboard
+
+format = <label-layout>
+
+label-layout =  %layout%
 
