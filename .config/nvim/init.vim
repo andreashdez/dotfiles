@@ -1,6 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'chriskempson/base16-vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -38,13 +39,12 @@ let g:syntastic_check_on_wq=0
 
 
 " NerdTree toggle
-map <C-m> :NERDTreeTabsToggle<CR>
+map <Space><Space> :NERDTreeTabsToggle<CR>
 
 
 " Gruvbox configuration
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_improved_warnings=1
 
 " }}} Plugin settings
 
@@ -60,8 +60,10 @@ set shortmess=atToOI
 
 
 " Syntax highlighting
-colorscheme gruvbox
-set background=dark
+""colorscheme gruvbox
+""set background=dark
+colorscheme base16-oceanicnext
+highlight clear LineNr
 
 
 " Title and hidden buffers
@@ -107,16 +109,4 @@ set sidescroll=1
 " Move between buffers
 nnoremap <C-k> :bp<CR>
 nnoremap <C-j> :bn<CR>
-
-
-" Editing shortcuts
-"inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
-
-
-" HTML editing
-"set matchpairs+=<:>
-
-"autocmd FileType html inoremap ;p <p></p><Enter><Enter><++><Esc>2ki
-"autocmd FileType html inoremap ;i <em></em><Space><++><Esc>FeF<i
-"autocmd FileType html inoremap ;b <b></b><Space><++><Esc>FbF<i
 

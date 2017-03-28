@@ -1,4 +1,6 @@
+! .Xresources
 
+! main config
 Xft.dpi:        200
 Xft.antialias:  true
 Xft.hinting:    true
@@ -7,65 +9,39 @@ Xft.autohint:   true
 Xft.hintstyle:  hintfull
 Xft.lcdfilter:  lcddefault
 
-! colors
-*cursorColor:  #ebdbb2
-! Background: Black (hard contrast)
-*background: #1d2021
-! Foreground: White
-*foreground: #ebdbb2
-! Black + DarkGrey
-*color0:  #1d2021
-*color8:  #928374
-! DarkRed + Red
-*color1:  #cc241d
-*color9:  #fb4934
-! DarkGreen + Green
-*color2:  #98971a
-*color10: #b8bb26
-! DarkYellow + Yellow
-*color3:  #d79921
-*color11: #fabd2f
-! DarkBlue + Blue
-*color4:  #458588
-*color12: #83a598
-! DarkMagenta + Magenta
-*color5:  #b16286
-*color13: #d3869b
-! DarkCyan + Cyan
-*color6:  #689d6a
-*color14: #8ec07c
-! LightGrey + White
-*color7:  #a89984
-*color15: #ebdbb2
-! for 256 color stuff
-*color24:  #076678
-*color66:  #427b58
-*color88:  #9d0006
-*color96:  #8f3f71
-*color100: #79740e
-*color108: #8ec07c
-*color109: #83a598
-*color130: #af3a03
-*color136: #b57614
-*color142: #b8bb26
-*color167: #fb4934
-*color175: #d3869b
-*color208: #fe8019
-*color214: #fabd2f
-*color223: #ebdbb2
-*color228: #f4e8ba
-*color229: #fdf4c1
-*color230: #ffffc8
-*color234: #1d2021
-*color235: #282828
-*color236: #32302f
-*color237: #3c3836
-*color239: #504945
-*color241: #665c54
-*color243: #7c6f64
-*color244: #928374
-*color245: #928374
-*color246: #a89984
-*color248: #bdae93
-*color250: #d5c4a1
+! Base16 OceanicNext
+*.foreground:   #c0c5ce
+*.background:   #1b2b34
+*.cursorColor:  #c0c5ce
+! black, darkgrey
+*.color0:       #1b2b34
+*.color8:       #65737e
+! red
+*.color1:       #ec5f67
+*.color9:       #ec5f67
+! green
+*.color2:       #99c794
+*.color10:      #99c794
+! yellow
+*.color3:       #fac863
+*.color11:      #fac863
+! blue
+*.color4:       #6699cc
+*.color12:      #6699cc
+! purple
+*.color5:       #c594c5
+*.color13:      #c594c5
+! cyan
+*.color6:       #5fb3b3
+*.color14:      #5fb3b3
+! grey, white
+*.color7:       #c0c5ce
+*.color15:      #d8dee9
+! extra colours
+*.color16:      #f99157
+*.color17:      #ab7967
+*.color18:      #343d46
+*.color19:      #4f5b66
+*.color20:      #a7adba
+*.color21:      #cdd3de
 

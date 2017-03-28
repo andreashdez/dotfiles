@@ -33,7 +33,8 @@ exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 
 
 # System font
-font pango: Meslo LG S for Powerline 10
+font pango: Hack 10
+#font pango: Meslo LG S for Powerline 10
 
 
 # Colours from Xresources

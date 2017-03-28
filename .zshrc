@@ -2,6 +2,7 @@ export TERM=xterm-256color
 export ANDROID_HOME=/opt/android-sdk/
 export PATH=${PATH}:~/.android-sdk/platform-tools:/~/.android-sdk/tools:/opt/cuda/bin
 export EDITOR=nvim
+export TERMINAL=termite
 
 source ~/.zplug/init.zsh
 
@@ -22,6 +23,8 @@ zplug "zplug/zplug", hook-build:"zplug --self-manage"
 zplug "sindresorhus/pure", use:purity.zsh, from:github, as:theme
 
 zplug load
+
+alias vi=nvim
 
 # zsh-newuser-install
 HISTFILE=~/.histfile

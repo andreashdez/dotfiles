@@ -1,4 +1,4 @@
-# .config/compton.conf
+# .config/compton/config
 
 backend = "glx";
 paint-on-overlay = true;
@@ -15,6 +15,9 @@ no-dnd-shadow = true;
 clear-shadow = true;
 shadow-radius = 14;
 shadow-ignore-shaped = true;
+shadow-exclude = [
+    "name = 'noshadow'"
+];
 
 
 # Opacity

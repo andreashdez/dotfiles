@@ -1,8 +1,7 @@
 # .config/termite/config
 
 [options]
-#font = Droid Sans Mono Slashed for Powerline Regular 11
-font = Meslo LG S for Powerline 11
+font = Hack Regular 11
 browser = google-chrome-stable
 
 resize_grip = false
@@ -10,7 +9,7 @@ scroll_on_output = false
 scroll_on_keystroke = true
 scrollback_lines = 10000
 audible_bell = false
-visible_bell = false
+visible_bell = true
 mouse_autohide = false
 allow_bold = true
 dynamic_title = true
@@ -21,32 +20,40 @@ search_wrap = true
 cursor_blink = off
 
 
-# gruvbox colour scheme
 [colors]
-background = #1d2021
-foreground = #f9f5d7
-# Black and DarkGrey
-color0  = #282828
-color8  = #928374
-# DarkRed and Red
-color1  = #cc241d
-color9  = #fb4934
-# DarkGreen and Green
-color2  = #98971a
-color10 = #b8bb26
-# DarkYellow and Yellow
-color3  = #d79921
-color11 = #fabd2f
-# DarkBlue and Blue
-color4  = #458588
-color12 = #83a598
-# DarkMagenta and Magenta
-color5  = #b16286
-color13 = #d3869b
-# DarkCyan and Cyan
-color6  = #689d6a
-color14 = #8ec07c
-# LightGrey and White
-color7  = #a89984
-color15 = #ebdbb2
+foreground      = #c0c5ce
+foreground_bold = #cdd3de
+cursor          = #c0c5ce
+background      = #1b2b34
 
+# black, darkgrey
+color0  = #1b2b34
+color8  = #65737e
+# red
+color1  = #ec5f67
+color9  = #ec5f67
+# green
+color2  = #99c794
+color10 = #99c794
+# yellow
+color3  = #fac863
+color11 = #fac863
+# blue
+color4  = #6699cc
+color12 = #6699cc
+# purple
+color5  = #c594c5
+color13 = #c594c5
+# cyan
+color6  = #5fb3b3
+color14 = #5fb3b3
+# grey, white
+color7  = #c0c5ce
+color15 = #d8dee9
+# extra colours
+color16 = #f99157
+color17 = #ab7967
+color18 = #343d46
+color19 = #4f5b66
+color20 = #a7adba
+color21 = #cdd3de
