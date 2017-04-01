@@ -1,5 +1,11 @@
+# ~/.config/sxhkd/sxhkdrc
+# -------------------------------------
+# sxhkd configuration file
+
+
+
 #
-# wm independent hotkeys
+# Non wm specific config
 #
 
 # terminal emulator
@@ -10,11 +16,11 @@ super + Return
 super + space
         rofi -show drun
 
-# make sxhkd reload its configuration files:
+# reload sxhk config file
 super + Escape
         pkill -USR1 -x sxhkd
 
-# volume
+# volume control
 XF86AudioRaiseVolume
         pamixer -i 5
 XF86AudioLowerVolume
@@ -22,25 +28,28 @@ XF86AudioLowerVolume
 XF86AudioMute
         pamixer -t
 
-# exit wm
-super + shift + r
-        ~/.config/sxhkd/wmexit reboot
-super + shift + s
-        ~/.config/sxhkd/wmexit shutdown
-super + shift + e
-        ~/.config/sxhkd/wmexit lock
-
 # screenshots
 Print
         scrot ~/Pictures/Screenshot_%Y-%m-%d_%H-%M-%S.png
 ctrl + Print
         scrot -u -b ~/Pictures/Screenshot_%Y-%m-%d_%H-%M-%S.png
 
+# exit wm
+super + shift + r
+        ~/.bin/wmexit reboot
+super + shift + s
+        ~/.bin/wmexit shutdown
+super + shift + e
+        ~/.bin/wmexit lock
+super + ctrl + shift + s
+        ~/.bin/wmexit suspend
+
+
+
 #
-# bspwm hotkeys
+# bspwm specific config
 #
 
-# quit bspwm normally
 super + shift + q
         bspc quit
 
@@ -60,6 +69,8 @@ super + y
 super + g
         bspc node -s biggest
 
+
+
 #
 # state/flags
 #
@@ -71,6 +82,8 @@ super + {t,shift + t,s,f}
 # set the node flags
 super + ctrl + {x,y,z}
         bspc node -g {locked,sticky,private}
+
+
 
 #
 # focus/swap
@@ -106,6 +119,8 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
         bspc {desktop -f,node -d} '^{1-9,10}'
 
+
+
 #
 # preselect
 #
@@ -125,6 +140,8 @@ super + ctrl + space
 # cancel the preselection for the focused desktop
 super + ctrl + shift + space
         bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+
 
 #
 # move/resize

@@ -1,0 +1,38 @@
+#!/bin/bash
+
+background=1b2b34
+black=1b2b34ff
+grey=c0c5ceff
+green=99c794ff
+red=ed5f67ff
+white=d8dee9ff
+orange=ab7967ff
+blue=6699ccff
+
+lock() {
+    i3lock --color=$background --insidevercolor=$black --insidewrongcolor=$black --insidecolor=$black --ringvercolor=$blue --ringwrongcolor=$red --ringcolor=$orange --textcolor=$grey --separatorcolor=$orange --keyhlcolor=$green --bshlcolor=$green --timestr="%H:%M" --datestr="%a %d %b" -k
+}
+
+case "$1" in
+    lock)
+        lock
+        ;;
+    logout)
+        i3-msg exit
+        ;;
+    suspend)
+        lock && systemctl suspend
+        ;;
+    reboot)
+        systemctl reboot
+        ;;
+    shutdown)
+        systemctl poweroff
+        ;;
+    *)
+        echo "Usage: $0 {lock|logout|suspend|reboot|shutdown}"
+        exit 2
+esac
+
+exit 0
+

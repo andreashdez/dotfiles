@@ -1,20 +1,8 @@
 # .config/i3/config
+# -------------------------------------
+# i3 configuration file
 
-# Mod key
-set $mod Mod4
 
-
-# HiDPI
-exec_always --no-startup-id xrandr --dpi 200
-
-# Wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wp.jpg
-
-# Polybar
-exec_always --no-startup-id ~/.config/polybar/launch_polybar
-
-# Compositing
-exec_always --no-startup-id ~/.config/compton/launch_compton
 
 # Window borders
 hide_edge_borders both
@@ -23,19 +11,12 @@ for_window [class="^.*"] border pixel 2
 
 # Gaps
 gaps inner 32
-#gaps outer 8
 smart_gaps on
 smart_borders no_gaps
 
 
-# Enable GNOME settings
-exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
-
-
 # System font
 font pango: Hack 10
-#font pango: Meslo LG S for Powerline 10
-
 
 # Colours from Xresources
 set_from_resource $black       color0
@@ -55,21 +36,22 @@ set_from_resource $darkwhite   color7
 set_from_resource $white       color15
 
 
+
+# Mod key
+set $mod Mod4
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
-
 
 # Start a terminal
 bindsym $mod+Return exec termite
 
-
 # Kill focused window
 bindsym $mod+w kill
 
-
-# start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
+# start program launcher
 bindsym $mod+space exec rofi -show drun
+
 
 
 # change focus
@@ -85,16 +67,15 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 
+
 # split in horizontal orientation
 bindsym $mod+Shift+v split h
 
 # split in vertical orientation
 bindsym $mod+v split v
 
-
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+Shift+s layout stacking
@@ -103,6 +84,7 @@ bindsym $mod+Shift+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
+
 
 
 # Workspace names
@@ -142,6 +124,7 @@ bindsym $mod+Shift+9 move container to workspace $wp9
 bindsym $mod+Shift+0 move container to workspace $wp0
 
 
+
 # Assign programs to workspaces
 assign [class="Google-chrome"]          $wp1
 assign [class="jetbrains-idea-ce"]      $wp2
@@ -149,7 +132,6 @@ assign [class="Gnome-builder"]          $wp2
 assign [class="Atom"]                   $wp2
 assign [class="jetbrains-pycharm-ce"]   $wp2
 assign [class="jetbrains-studio"]       $wp2
-
 
 # Sane window configuration
 for_window [window_role="pop-up"]       floating enable
@@ -160,9 +142,11 @@ for_window [window_type="dialog"]       floating enable
 for_window [window_type="menu"]         floating enable
 
 
+
 # Manage i3
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
+
 
 
 # Resize windows dynamically
@@ -172,19 +156,21 @@ bindsym $mod+Shift+o resize grow height 40 px or 2 ppt
 bindsym $mod+Shift+p resize grow width 40 px or 2 ppt
 
 
+
 # System commands
 set $mode_system System: (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id ~/.config/i3/i3exit lock, mode "default"
-    bindsym e exec --no-startup-id ~/.config/i3/i3exit logout, mode "default"
-    bindsym s exec --no-startup-id ~/.config/i3/i3exit suspend, mode "default"
-    bindsym r exec --no-startup-id ~/.config/i3/i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id ~/.config/i3/i3exit shutdown, mode "default"
+    bindsym l exec --no-startup-id ~/.bin/wmexit lock, mode "default"
+    bindsym e exec --no-startup-id ~/.bin/wmexit logout, mode "default"
+    bindsym s exec --no-startup-id ~/.bin/wmexit suspend, mode "default"
+    bindsym r exec --no-startup-id ~/.bin/wmexit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id ~/.bin/wmexit shutdown, mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 bindsym $mod+Escape mode "$mode_system"
+
 
 
 # Keyboard functionkeys (audio, brightness, screenshots)
@@ -196,9 +182,6 @@ bindsym Print exec --no-startup-id scrot ~/Pictures/Screenshot_%Y-%m-%d_%H-%M-%S
 bindsym Ctrl+Print exec --no-startup-id scrot -u -b ~/Pictures/Screenshot_%Y-%m-%d_%H-%M-%S.png
 bindsym --release Shift+Print exec --no-startup-id scrot -s ~/Pictures/Screenshot_%Y-%m-%d_%H-%M-%S.png
 
-
-# Alt+Shift to change keyboard layout
-exec --no-startup-id "setxkbmap -layout 'gb,es' -option 'grp:alt_shift_toggle'"
 
 
 # Window colors

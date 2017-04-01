@@ -1,9 +1,12 @@
 # .config/termite/config
+# -------------------------------------
+# termite configuration file
+
+
 
 [options]
 font = Hack Regular 11
 browser = google-chrome-stable
-
 resize_grip = false
 scroll_on_output = false
 scroll_on_keystroke = true
@@ -16,8 +19,8 @@ dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
 search_wrap = true
-
 cursor_blink = off
+
 
 
 [colors]
@@ -25,7 +28,6 @@ foreground      = #c0c5ce
 foreground_bold = #cdd3de
 cursor          = #c0c5ce
 background      = #1b2b34
-
 # black, darkgrey
 color0  = #1b2b34
 color8  = #65737e
@@ -57,3 +59,4 @@ color18 = #343d46
 color19 = #4f5b66
 color20 = #a7adba
 color21 = #cdd3de
+
