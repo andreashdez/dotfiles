@@ -14,7 +14,7 @@ rofi.scroll-method:     1
 
 ! Theming
 
-rofi.font:              Hack 20
+rofi.font:              Archivo Narrow 20
 !                       bg       fg       altbg    hlbg     hlfg
 rofi.color-normal:      #1b2b34, #c0c5ce, #1b2b34, #c0c5ce, #1b2b34
 rofi.color-urgent:      #1b2b34, #c0c5ce, #1b2b34, #c0c5ce, #1b2b34

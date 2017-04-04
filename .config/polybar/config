@@ -10,9 +10,11 @@ sel_bg      = #88000000
 white       = #d8dee9
 grey        = #c0c5ce
 darkgrey    = #65737e
+silver      = #a7adba
 red         = #ec5f67
 yellow      = #fac863
 green       = #99c794
+cyan        = #5fb3b3
 
 
 
@@ -26,18 +28,18 @@ bottom = true
 fixed-center = true
 
 background = ${colours.bg}
-foreground = ${colours.white}
+foreground = ${colours.grey}
 
 line-size = 2
 
-module-margin-left = 3
-padding = 2
+module-margin-left = 5
+padding = 5
 
-font-0 = Hack:size=20;4
+font-0 = Archivo Narrow:size=22;4
 font-1 = Noto Emoji:size=20;4
 font-2 = FontAwesome:size=20;4
 
-modules-left = i3 bspwm
+modules-left = bspwm
 modules-center =
 modules-right = volume backlight keyboard wlan filesystem battery date
 
@@ -45,39 +47,10 @@ modules-right = volume backlight keyboard wlan filesystem battery date
 
 ; MODULES
 
-[module/i3]
-type = internal/i3
-wrapping-scroll = false
-reverse-scroll = false
-
-ws-icon-0 = 0;
-ws-icon-1 = 1;
-ws-icon-2 = 2;
-ws-icon-3 = 9;
-ws-icon-default = 
-
-label-focused = %icon%
-label-focused-background = ${colours.sel_bg}
-label-focused-underline = ${colours.white}
-label-focused-padding = 2
-
-label-unfocused = %icon%
-label-unfocused-foreground = ${colours.grey}
-label-unfocused-padding = 2
-
-label-visible = %icon%
-label-visible-foreground = ${colours.grey}
-label-visible-padding = 2
-
-label-urgent = %icon%
-label-urgent-foreground = ${colours.red}
-label-urgent-underline = ${colours.red}
-label-urgent-padding = 2
-
-
-
 [module/bspwm]
 type = internal/bspwm
+inline-mode = true
+enable-scroll = false
 
 ws-icon-0 = I;
 ws-icon-1 = II;
@@ -90,38 +63,41 @@ format = <label-state> <label-mode>
 label-focused = %icon%
 label-focused-background = ${colours.sel_bg}
 label-focused-underline = ${colours.white}
-label-focused-padding = 2
+label-focused-padding = 4
 
 label-occupied = %icon%
-label-occupied-background = ${colours.sel_bg}
-label-occupied-foreground = ${colours.grey}
-label-occupied-padding = 2
+label-occupied-foreground = ${colours.silver}
+label-occupied-underline = ${colours.silver}
+label-occupied-padding = 4
 
 label-urgent = %icon%
 label-urgent-foreground = ${colours.red}
 label-urgent-underline = ${colours.red}
-label-urgent-padding = 2
+label-urgent-padding = 4
 
 label-empty = %icon%
-label-empty-foreground = ${colours.grey}
-label-empty-padding = 1
+label-empty-foreground = ${colours.silver}
+label-empty-padding = 4
 
-label-monocle = 🔎
+label-monocle = monocle
+label-monocle-background = ${colours.sel_bg}
+label-monocle-underline = ${colours.white}
+label-monocle-padding-right = 4
 
 
 
 [module/date]
 type = internal/date
 interval = 5
-date = %a %d %b,
+date = %a %d %b
 time = %H:%M
 
 format = <label>
 format-background = ${colours.sel_bg}
 
-label = %date% %time%
+label = %date%, %time%
 label-underline = ${colours.white}
-label-padding = 3
+label-padding = 5
 
 
 
@@ -132,9 +108,9 @@ adapter = AC
 poll-interval = 5
 time-format = %H:%M
 
-format-charging = <ramp-capacity> <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
-format-full = <ramp-capacity> <label-full>
+format-charging = <ramp-capacity>  <label-charging>
+format-discharging = <ramp-capacity>  <label-discharging>
+format-full = <ramp-capacity>  <label-full>
 
 label-charging = %percentage%% (%time%)
 label-charging-foreground = ${colours.green}
@@ -174,7 +150,7 @@ format-volume = <ramp-volume> <label-volume>
 format-muted = <label-muted>
 
 label-volume = %percentage%%
-label-muted = 🔇 -
+label-muted = 🔇  -
 label-muted-foreground = ${colours.darkgrey}
 
 ramp-volume-0 = 🔈
@@ -188,12 +164,13 @@ type = internal/fs
 mount-0 = /mnt/ntfs
 mount-1 = /
 fixed-values = true
+spacing = 5
 
 format-mounted = <label-mounted>
 format-unmounted = <label-unmounted>
 
-label-mounted =  %free%
-label-unmounted =  -
+label-mounted =   %free%
+label-unmounted =   -
 label-unmounted-foreground = ${colours.darkgrey}
 
 
@@ -206,8 +183,8 @@ interval = 5
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
-label-connected =  %signal%%
-label-disconnected =  -
+label-connected =   %signal%% (%essid%)
+label-disconnected =   -
 label-disconnected-foreground = ${colours.darkgrey}
 
 
@@ -217,5 +194,5 @@ type = internal/xkeyboard
 
 format = <label-layout>
 
-label-layout =  %layout%
+label-layout =   %layout%
 

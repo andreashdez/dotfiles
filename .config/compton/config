@@ -20,6 +20,7 @@ no-dnd-shadow = true;
 clear-shadow = true;
 shadow-radius = 14;
 shadow-ignore-shaped = true;
+shadow-exclude-reg = "x50+0-0";
 shadow-exclude = [
     "name = 'noshadow'"
 ];
