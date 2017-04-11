@@ -10,11 +10,9 @@ sel_bg      = #88000000
 white       = #d8dee9
 grey        = #c0c5ce
 darkgrey    = #65737e
-silver      = #a7adba
 red         = #ec5f67
 yellow      = #fac863
 green       = #99c794
-blue        = #6699cc
 
 
 
@@ -64,6 +62,7 @@ ws-icon-default = 
 format = <label-state> <label-mode>
 
 label-focused = %icon%
+label-focused-foreground = ${colours.white}
 label-focused-background = ${colours.sel_bg}
 label-focused-underline = ${colours.white}
 label-focused-padding = 4
