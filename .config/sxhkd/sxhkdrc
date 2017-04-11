@@ -10,6 +10,8 @@
 
 # terminal emulator
 super + Return
+        termite -e fish
+super + shift + Return
         termite
 
 # program launcher

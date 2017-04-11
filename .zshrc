@@ -3,6 +3,8 @@ export ANDROID_HOME=/opt/android-sdk/
 export PATH=${PATH}:~/.android-sdk/platform-tools:/~/.android-sdk/tools:/opt/cuda/bin
 export EDITOR=nvim
 export TERMINAL=termite
+export PAGER=most
+export MANPAGER=$PAGER
 
 source ~/.zplug/init.zsh
 
