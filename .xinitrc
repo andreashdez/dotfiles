@@ -11,6 +11,7 @@ setxkbmap -layout "gb,es" -option "grp:shifts_toggle" &
 
 ~/.bin/launch_polybar &
 ~/.bin/launch_compton &
+~/.bin/launch_mpd &
 
 feh --bg-fill ~/Pictures/wp.jpg &
 
