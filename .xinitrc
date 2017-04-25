@@ -15,7 +15,7 @@ setxkbmap -layout "gb,es" -option "grp:shifts_toggle" &
 
 feh --bg-fill ~/Pictures/wp.jpg &
 
-/usr/lib/gnome-settings-daemon/gnome-settings-daemon &
+/usr/lib/gnome-settings-daemon/gsd-xsettings &
 
 
 exec bspwm
