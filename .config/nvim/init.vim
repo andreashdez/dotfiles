@@ -7,7 +7,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'lervag/vimtex'
-Plug 'morhetz/gruvbox'
+Plug 'mhinz/vim-startify'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -28,6 +28,11 @@ let g:airline_powerline_fonts=1
 ""let g:airline#extensions#tabline#show_buffers=0
 ""let g:airline#extensions#tabline#tab_min_count=2
 
+let g:airline_left_sep = '▒'
+let g:airline_right_sep = '▒'
+let g:airline_left_alt_sep = '▏'
+let g:airline_right_alt_sep = '▕'
+
 
 " Syntastic stuff
 set statusline+=%#warningmsg#
@@ -47,8 +52,19 @@ map <Space><Space> :NERDTreeTabsToggle<CR>
 
 
 " Gruvbox configuration
-let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='hard'
+""let g:gruvbox_italic=1
+""let g:gruvbox_contrast_dark='hard'
+
+
+" Startify
+let g:startify_list_order = [
+            \ ['   Files:'], 'files',
+            \ ['   Current Directory:'], 'dir',
+            \ ['   Sessions:'], 'sessions',
+            \ ['   Bookmarks:'], 'bookmarks',
+            \ ['   Commands:'], 'commands',
+            \ ]
+
 
 " }}} Plugin settings
 
@@ -61,6 +77,7 @@ set autowrite
 set autoread
 set showmatch
 set shortmess=atToOI
+set mouse=a
 
 
 " Syntax highlighting

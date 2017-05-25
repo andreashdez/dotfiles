@@ -5,8 +5,9 @@
 
 
 [options]
-font = Hack Regular 11
+#font = Hack Regular 11
 #font = Iosevka Regular 12
+font = Iosevka Term 12
 browser = google-chrome-stable
 resize_grip = false
 scroll_on_output = false

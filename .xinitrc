@@ -11,9 +11,9 @@ setxkbmap -layout "gb,es" -option "grp:shifts_toggle" &
 
 ~/.bin/launch_polybar &
 ~/.bin/launch_compton &
-~/.bin/launch_mpd &
+#~/.bin/launch_mpd &
 
-feh --bg-fill ~/Pictures/wp.jpg &
+feh --bg-tile ~/Pictures/wp.jpg &
 
 /usr/lib/gnome-settings-daemon/gsd-xsettings &
 
