@@ -4,7 +4,7 @@
 
 
 
-[colours]
+[c]
 bg          = #cc000000
 sel_bg      = #88000000
 white       = #d8dee9
@@ -16,7 +16,7 @@ green       = #99c794
 
 
 
-; BAR
+; BARS
 
 [bar/bottom]
 monitor = eDP-1
@@ -25,8 +25,8 @@ height = 52
 bottom = true
 fixed-center = true
 
-background = ${colours.bg}
-foreground = ${colours.grey}
+background = ${c.bg}
+foreground = ${c.grey}
 
 line-size = 2
 
@@ -41,6 +41,32 @@ font-2 = FontAwesome:size=16;4
 modules-left = bspwm
 modules-center =
 modules-right = volume backlight keyboard wlan filesystem battery date
+
+
+
+[bar/bottom_ext]
+monitor = HDMI-1
+width = 100%
+height = 26
+bottom = true
+fixed-center = true
+
+background = ${c.bg}
+foreground = ${c.grey}
+
+line-size = 2
+
+module-margin-left = 5
+padding-right = 5
+padding-left = 4
+
+font-0 = Archivo Narrow:size=11;2
+font-1 = Noto Emoji:size=8;2
+font-2 = FontAwesome:size=8;2
+
+modules-left = bspwm
+modules-center =
+modules-right = date
 
 
 
@@ -62,33 +88,32 @@ ws-icon-default = 
 format = <label-state> <label-mode>
 
 label-focused = %icon%
-label-focused-foreground = ${colours.white}
-label-focused-background = ${colours.sel_bg}
-label-focused-underline = ${colours.white}
+label-focused-foreground = ${c.white}
+label-focused-background = ${c.sel_bg}
+label-focused-underline = ${c.white}
 label-focused-padding = 4
 label-focused-margin-left = 1
 
 label-occupied = %icon%
-label-occupied-foreground = ${colours.white}
-label-occupied-underline = ${colours.white}
+label-occupied-foreground = ${c.white}
+label-occupied-underline = ${c.white}
 label-occupied-padding = 4
 label-occupied-margin-left = 1
 
 label-urgent = %icon%
-label-urgent-foreground = ${colours.red}
-label-urgent-underline = ${colours.red}
+label-urgent-foreground = ${c.red}
+label-urgent-underline = ${c.red}
 label-urgent-padding = 4
 label-urgent-margin-left = 1
 
 label-empty = %icon%
-label-empty-foreground = ${colours.darkgrey}
-;label-empty-underline = ${colours.darkgrey}
+label-empty-foreground = ${c.darkgrey}
 label-empty-padding = 4
 label-empty-margin-left = 1
 
 label-monocle = monocle
-label-monocle-background = ${colours.sel_bg}
-label-monocle-underline = ${colours.white}
+label-monocle-background = ${c.sel_bg}
+label-monocle-underline = ${c.white}
 label-monocle-padding-right = 4
 
 
@@ -102,10 +127,10 @@ time = %H:%M
 time-alt = %H:%M
 
 format = <label>
-format-background = ${colours.sel_bg}
+format-background = ${c.sel_bg}
 
 label = %date%  %time%
-label-underline = ${colours.white}
+label-underline = ${c.white}
 label-padding = 5
 
 
@@ -122,10 +147,10 @@ format-discharging = <ramp-capacity>  <label-discharging>
 format-full = <ramp-capacity>  <label-full>
 
 label-charging = %percentage%% (%time%)
-label-charging-foreground = ${colours.green}
+label-charging-foreground = ${c.green}
 
 label-discharging = %percentage%% (%time%)
-label-discharging-foreground = ${colours.yellow}
+label-discharging-foreground = ${c.yellow}
 
 label-full = %percentage%%
 
@@ -160,7 +185,7 @@ format-muted = <label-muted>
 
 label-volume = %percentage%%
 label-muted = 🔇  -
-label-muted-foreground = ${colours.darkgrey}
+label-muted-foreground = ${c.darkgrey}
 
 ramp-volume-0 = 🔈
 ramp-volume-1 = 🔉
@@ -180,7 +205,7 @@ format-unmounted = <label-unmounted>
 
 label-mounted =   %free%
 label-unmounted =   -
-label-unmounted-foreground = ${colours.darkgrey}
+label-unmounted-foreground = ${c.darkgrey}
 
 
 
@@ -194,12 +219,12 @@ format-disconnected = <label-disconnected>
 
 label-connected = %essid%
 label-disconnected =   -
-label-disconnected-foreground = ${colours.darkgrey}
+label-disconnected-foreground = ${c.darkgrey}
 
 ramp-signal-0 = 
-ramp-signal-0-foreground = ${colours.red}
+ramp-signal-0-foreground = ${c.red}
 ramp-signal-1 = 
-ramp-signal-1-foreground = ${colours.yellow}
+ramp-signal-1-foreground = ${c.yellow}
 ramp-signal-2 = 
 
 

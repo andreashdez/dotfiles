@@ -3,15 +3,15 @@
 bg_image=/home/andreas/Pictures/wp.png
 bg_inside=1b2b3400
 bg_ver=6699cc00
-bg_wrong=ed5f6700
+bg_wrong=ed5f6744
 fg_ring=ded8cc00
-fg_ver=6699ccff
+fg_ver=1b2b3400
 fg_wrong=ed5f67ff
 fg_action=1b2b34ff
 fg_text=1b2b34ff
 
 lock() {
-    i3lock --image=$bg_image --insidevercolor=$bg_ver --insidewrongcolor=$bg_wrong --insidecolor=$bg_inside --ringvercolor=$fg_ver --ringwrongcolor=$fg_wrong --ringcolor=$fg_ring --linecolor=$fg_ring --separatorcolor=$fg_action --textcolor=$fg_text --keyhlcolor=$fg_action --bshlcolor=$fg_action -s -k --timestr="%H:%M" --timepos="ix:iy+20" --timecolor=$fg_text --timefont="Iosevka" --timesize=128 --datestr="%a %d %b" --datepos="ix:iy+80" --datecolor=$fg_text --datefont="Archivo Narrow" --datesize=56
+    i3lock --image=$bg_image -t --insidevercolor=$bg_ver --insidewrongcolor=$bg_wrong --insidecolor=$bg_inside --ringvercolor=$fg_ver --ringwrongcolor=$fg_wrong --ringcolor=$fg_ring --linecolor=$fg_ring --separatorcolor=$fg_action --textcolor=$fg_text --keyhlcolor=$fg_action --bshlcolor=$fg_action -s -S 0 -k --timestr="%H:%M" --timepos="ix:iy+20" --timecolor=$fg_text --timefont="Iosevka" --timesize=128 --datestr="%a %d %b" --datepos="ix:iy+80" --datecolor=$fg_text --datefont="Archivo Narrow" --datesize=56
 }
 
 case "$1" in
