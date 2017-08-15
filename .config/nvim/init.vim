@@ -1,12 +1,13 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'chriskempson/base16-vim'
+"Plug 'chriskempson/base16-vim'
 Plug 'ervandew/supertab'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'lervag/vimtex'
+Plug 'mhartington/oceanic-next'
 Plug 'mhinz/vim-startify'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdcommenter'
@@ -27,6 +28,7 @@ let g:airline_powerline_fonts=1
 ""let g:airline#extensions#tabline#enabled=1
 ""let g:airline#extensions#tabline#show_buffers=0
 ""let g:airline#extensions#tabline#tab_min_count=2
+let g:airline_theme='oceanicnext'
 
 let g:airline_left_sep = '▒'
 let g:airline_right_sep = '▒'
@@ -49,11 +51,6 @@ let g:syntastic_check_on_wq=0
 
 " NerdTree toggle
 map <Space><Space> :NERDTreeTabsToggle<CR>
-
-
-" Gruvbox configuration
-""let g:gruvbox_italic=1
-""let g:gruvbox_contrast_dark='hard'
 
 
 " Startify
@@ -81,10 +78,8 @@ set mouse=a
 
 
 " Syntax highlighting
-""colorscheme gruvbox
-""set background=dark
-colorscheme base16-oceanicnext
-highlight clear LineNr
+colorscheme OceanicNext
+""highlight clear LineNr
 
 
 " Title and hidden buffers

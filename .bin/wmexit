@@ -1,17 +1,18 @@
 #!/bin/bash
 
 bg_image=/home/andreas/Pictures/wp.png
-bg_inside=1b2b3400
-bg_ver=6699cc00
+bg_inside=1b2b3499
+bg_ver=#6699cc44
 bg_wrong=ed5f6744
-fg_ring=ded8cc00
-fg_ver=1b2b3400
+fg_ring=1b2b34ff
+fg_ver=6699ccff
 fg_wrong=ed5f67ff
-fg_action=1b2b34ff
-fg_text=1b2b34ff
+fg_action=6699ccff
+fg_text=c0c5ceff
+fg_text_str=d8dee9ff
 
 lock() {
-    i3lock --image=$bg_image -t --insidevercolor=$bg_ver --insidewrongcolor=$bg_wrong --insidecolor=$bg_inside --ringvercolor=$fg_ver --ringwrongcolor=$fg_wrong --ringcolor=$fg_ring --linecolor=$fg_ring --separatorcolor=$fg_action --textcolor=$fg_text --keyhlcolor=$fg_action --bshlcolor=$fg_action -s -S 0 -k --timestr="%H:%M" --timepos="ix:iy+20" --timecolor=$fg_text --timefont="Iosevka" --timesize=128 --datestr="%a %d %b" --datepos="ix:iy+80" --datecolor=$fg_text --datefont="Archivo Narrow" --datesize=56
+    i3lock --insidevercolor=$bg_ver --insidewrongcolor=$bg_wrong --insidecolor=$bg_inside --ringvercolor=$fg_ver --ringwrongcolor=$fg_wrong --ringcolor=$fg_ring --linecolor=$fg_ring --separatorcolor=$fg_action --textcolor=$fg_text --keyhlcolor=$fg_action --bshlcolor=$fg_action -s --screen 0 --clock --indicator --composite --blur=8 --timestr="%H:%M" --timepos="ix-200:iy-80" --timecolor=$fg_text_str --timefont="Oswald" --timesize=112 --datestr="%A, %d" --datepos="ix-200:iy-30" --datecolor=$fg_text --datefont="Oswald" --datesize=48 --veriftext="..." --wrongtext="wrong" --textsize=40 --modsize=114 --radius=90
 }
 
 case "$1" in

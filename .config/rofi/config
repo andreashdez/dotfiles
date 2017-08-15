@@ -14,13 +14,14 @@ rofi.scroll-method:     1
 
 ! Theming
 
-rofi.font:              Archivo Narrow 20
+rofi.font:              Oswald 20
+!rofi.font:              Archivo Narrow 20
 !                       bg       fg       altbg    hlbg     hlfg
 rofi.color-normal:      #1b2b34, #c0c5ce, #1b2b34, #c0c5ce, #1b2b34
 rofi.color-urgent:      #1b2b34, #c0c5ce, #1b2b34, #c0c5ce, #1b2b34
 rofi.color-active:      #1b2b34, #c0c5ce, #1b2b34, #c0c5ce, #1b2b34
 rofi.color-window:      #1b2b34, #1b2b34
-rofi.line-margin:       16
+rofi.line-margin:       10
 rofi.separator-style:   none
 rofi.hide-scrollbar:    true
 
@@ -28,7 +29,7 @@ rofi.hide-scrollbar:    true
 
 ! Layout
 
-rofi.padding:		900
+rofi.padding:		886
 rofi.fullscreen:        true
 rofi.auto-select:       true
 rofi.dpi:               200

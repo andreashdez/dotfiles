@@ -12,7 +12,7 @@
 super + Return
         termite -e fish
 super + shift + Return
-        termite
+        alacritty
 
 # program launcher
 super + space

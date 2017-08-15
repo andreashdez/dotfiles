@@ -5,14 +5,14 @@
 
 
 [c]
-bg          = #cc000000
+bg          = #d7000000
 sel_bg      = #88000000
-white       = #d8dee9
-grey        = #c0c5ce
-darkgrey    = #65737e
-red         = #ec5f67
-yellow      = #fac863
-green       = #99c794
+white       = ${xrdb:color15:#d8dee9}
+grey        = ${xrdb:color7:#c0c5ce}
+darkgrey    = ${xrdb:color8:#65737e}
+red         = ${xrdb:color1:#ec5f67}
+yellow      = ${xrdb:color3:#fac863}
+green       = ${xrdb:color2:#99c794}
 
 
 
@@ -34,9 +34,9 @@ module-margin-left = 5
 padding-right = 5
 padding-left = 4
 
-font-0 = Archivo Narrow:size=22;4
-font-1 = Noto Emoji:size=16;4
-font-2 = FontAwesome:size=16;4
+font-0 = Oswald:size=20;4
+font-1 = Noto Emoji:size=14;3
+font-2 = FontAwesome:size=14;3
 
 modules-left = bspwm
 modules-center =
@@ -91,7 +91,7 @@ label-focused = %icon%
 label-focused-foreground = ${c.white}
 label-focused-background = ${c.sel_bg}
 label-focused-underline = ${c.white}
-label-focused-padding = 4
+label-focused-padding = 5
 label-focused-margin-left = 1
 
 label-occupied = %icon%
@@ -114,22 +114,22 @@ label-empty-margin-left = 1
 label-monocle = monocle
 label-monocle-background = ${c.sel_bg}
 label-monocle-underline = ${c.white}
-label-monocle-padding-right = 4
+label-monocle-padding-right = 5
 
 
 
 [module/date]
 type = internal/date
 interval = 5
-date = %a %d %b
-date-alt = %A %d %b %Y
+date = %A, %-d
+date-alt = %A, %-d of %B
 time = %H:%M
 time-alt = %H:%M
 
 format = <label>
 format-background = ${c.sel_bg}
 
-label = %date%  %time%
+label = %date%  |  %time%
 label-underline = ${c.white}
 label-padding = 5
 
@@ -184,7 +184,7 @@ format-volume = <ramp-volume>  <label-volume>
 format-muted = <label-muted>
 
 label-volume = %percentage%%
-label-muted = 🔇  -
+label-muted = 🔇  %percentage%%
 label-muted-foreground = ${c.darkgrey}
 
 ramp-volume-0 = 🔈
