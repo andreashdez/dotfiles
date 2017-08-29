@@ -75,6 +75,7 @@ set autoread
 set showmatch
 set shortmess=atToOI
 set mouse=a
+"syntax on
 
 
 " Syntax highlighting
@@ -90,8 +91,8 @@ set hidden
 " Show line length
 set textwidth=79
 set nowrap
-""set colorcolumn=80
-""highlight ColorColumn ctermbg=233
+"set colorcolumn=80
+"highlight ColorColumn ctermbg=233
 
 
 " Auto remove all trailing whitespace on :w

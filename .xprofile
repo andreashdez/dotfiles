@@ -1,0 +1,17 @@
+#!/bin/sh
+
+export _JAVA_AWT_WM_NONREPARENTING=1
+export TERM=xterm-256color
+#export ANDROID_HOME=/opt/android-sdk/
+#export PATH=${PATH}:~/.android-sdk/platform-tools:/~/.android-sdk/tools:/opt/cuda/bin
+#export PATH=$PATH:/opt/cuda/bin
+export LD_LIBRARY_PATH=/opt/cuda/lib64:/opt/cuda/extras/CUPTI/lib64
+export CUDA_HOME=/opt/cuda
+export EDITOR=nvim
+export TERMINAL=termite
+export PAGER=most
+export MANPAGER=$PAGER
+
+
+#xrdb -merge ~/.Xresources
+

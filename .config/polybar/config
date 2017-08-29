@@ -4,7 +4,7 @@
 
 
 
-[c]
+[color]
 bg          = #d7000000
 sel_bg      = #88000000
 white       = ${xrdb:color15:#d8dee9}
@@ -21,12 +21,12 @@ green       = ${xrdb:color2:#99c794}
 [bar/bottom]
 monitor = eDP-1
 width = 100%
-height = 52
+height = 64
 bottom = true
 fixed-center = true
 
-background = ${c.bg}
-foreground = ${c.grey}
+background = ${color.bg}
+foreground = ${color.grey}
 
 line-size = 2
 
@@ -51,8 +51,8 @@ height = 26
 bottom = true
 fixed-center = true
 
-background = ${c.bg}
-foreground = ${c.grey}
+background = ${color.bg}
+foreground = ${color.grey}
 
 line-size = 2
 
@@ -77,44 +77,62 @@ type = internal/bspwm
 inline-mode = true
 enable-scroll = false
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-default = 
+ws-icon-default = 
 
 format = <label-state> <label-mode>
 
-label-focused = %icon%
-label-focused-foreground = ${c.white}
-label-focused-background = ${c.sel_bg}
-label-focused-underline = ${c.white}
+label-focused = 
+label-focused-foreground = ${color.white}
+label-focused-background = ${color.sel_bg}
+label-focused-underline = ${color.white}
 label-focused-padding = 5
 label-focused-margin-left = 1
 
-label-occupied = %icon%
-label-occupied-foreground = ${c.white}
-label-occupied-underline = ${c.white}
-label-occupied-padding = 4
+label-occupied = 
+label-occupied-foreground = ${color.white}
+label-occupied-padding = 5
 label-occupied-margin-left = 1
 
-label-urgent = %icon%
-label-urgent-foreground = ${c.red}
-label-urgent-underline = ${c.red}
-label-urgent-padding = 4
+label-urgent = 
+label-urgent-foreground = ${color.red}
+label-urgent-underline = ${color.red}
+label-urgent-padding = 5
 label-urgent-margin-left = 1
 
 label-empty = %icon%
-label-empty-foreground = ${c.darkgrey}
-label-empty-padding = 4
+label-empty-foreground = ${color.darkgrey}
+label-empty-padding = 5
 label-empty-margin-left = 1
 
 label-monocle = monocle
-label-monocle-background = ${c.sel_bg}
-label-monocle-underline = ${c.white}
+label-monocle-background = ${color.sel_bg}
+label-monocle-underline = ${color.white}
 label-monocle-padding-right = 5
+
+label-floating = floating
+label-floating-background = ${color.sel_bg}
+label-floating-underline = ${color.white}
+label-floating-padding-right = 5
+
+label-pseudotiled = pseudotiled
+label-pseudotiled-background = ${color.sel_bg}
+label-pseudotiled-underline = ${color.white}
+label-pseudotiled-padding-right = 5
+
+label-locked = locked
+label-locked-background = ${color.sel_bg}
+label-locked-underline = ${color.white}
+label-locked-padding-right = 5
+
+label-sticky = sticky
+label-sticky-background = ${color.sel_bg}
+label-sticky-underline = ${color.white}
+label-sticky-padding-right = 5
+
+label-private = private
+label-private-background = ${color.sel_bg}
+label-private-underline = ${color.white}
+label-private-padding-right = 5
 
 
 
@@ -127,10 +145,10 @@ time = %H:%M
 time-alt = %H:%M
 
 format = <label>
-format-background = ${c.sel_bg}
+format-background = ${color.sel_bg}
 
 label = %date%  |  %time%
-label-underline = ${c.white}
+label-underline = ${color.white}
 label-padding = 5
 
 
@@ -147,10 +165,10 @@ format-discharging = <ramp-capacity>  <label-discharging>
 format-full = <ramp-capacity>  <label-full>
 
 label-charging = %percentage%% (%time%)
-label-charging-foreground = ${c.green}
+label-charging-foreground = ${color.green}
 
 label-discharging = %percentage%% (%time%)
-label-discharging-foreground = ${c.yellow}
+label-discharging-foreground = ${color.yellow}
 
 label-full = %percentage%%
 
@@ -185,7 +203,7 @@ format-muted = <label-muted>
 
 label-volume = %percentage%%
 label-muted = 🔇  %percentage%%
-label-muted-foreground = ${c.darkgrey}
+label-muted-foreground = ${color.darkgrey}
 
 ramp-volume-0 = 🔈
 ramp-volume-1 = 🔉
@@ -204,8 +222,8 @@ format-mounted = <label-mounted>
 format-unmounted = <label-unmounted>
 
 label-mounted =   %free%
-label-unmounted =   -
-label-unmounted-foreground = ${c.darkgrey}
+label-unmounted =   no mount
+label-unmounted-foreground = ${color.darkgrey}
 
 
 
@@ -218,13 +236,13 @@ format-connected = <ramp-signal>  <label-connected>
 format-disconnected = <label-disconnected>
 
 label-connected = %essid%
-label-disconnected =   -
-label-disconnected-foreground = ${c.darkgrey}
+label-disconnected =   no network
+label-disconnected-foreground = ${color.darkgrey}
 
 ramp-signal-0 = 
-ramp-signal-0-foreground = ${c.red}
+ramp-signal-0-foreground = ${color.red}
 ramp-signal-1 = 
-ramp-signal-1-foreground = ${c.yellow}
+ramp-signal-1-foreground = ${color.yellow}
 ramp-signal-2 = 
 
 
