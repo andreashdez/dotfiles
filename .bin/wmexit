@@ -1,18 +1,22 @@
 #!/bin/bash
 
+. "${HOME}/.cache/wal/colors.sh"
+
 bg_image=/home/andreas/Pictures/wp.png
-bg_inside=1b2b3499
-bg_ver=#6699cc44
-bg_wrong=ed5f6744
-fg_ring=1b2b34ff
-fg_ver=6699ccff
-fg_wrong=ed5f67ff
-fg_action=6699ccff
-fg_text=c0c5ceff
-fg_text_str=d8dee9ff
+bg_inside="${color0}99"
+bg_ver="${color5}44"
+bg_wrong="${color5}44"
+fg_ring="${color0}ff"
+fg_ver="${color5}ff"
+fg_wrong="${color5}ff"
+fg_action="${color5}ff"
+fg_text="${color5}ff"
+fg_text_str="${color7}ff"
+
+
 
 lock() {
-    i3lock --insidevercolor=$bg_ver --insidewrongcolor=$bg_wrong --insidecolor=$bg_inside --ringvercolor=$fg_ver --ringwrongcolor=$fg_wrong --ringcolor=$fg_ring --linecolor=$fg_ring --separatorcolor=$fg_action --textcolor=$fg_text --keyhlcolor=$fg_action --bshlcolor=$fg_action -s --screen 0 --clock --indicator --composite --blur=8 --timestr="%H:%M" --timepos="ix-200:iy-80" --timecolor=$fg_text_str --timefont="Oswald" --timesize=112 --datestr="%A, %d" --datepos="ix-200:iy-30" --datecolor=$fg_text --datefont="Oswald" --datesize=48 --veriftext="..." --wrongtext="wrong" --textsize=40 --modsize=114 --radius=90
+    i3lock --insidevercolor=$bg_ver --insidewrongcolor=$bg_wrong --insidecolor=$bg_inside --ringvercolor=$fg_ver --ringwrongcolor=$fg_wrong --ringcolor=$fg_ring --linecolor=$fg_ring --separatorcolor=$fg_action --textcolor=$fg_text --keyhlcolor=$fg_action --bshlcolor=$fg_action -s --screen 0 --clock --indicator --composite --blur=8 --timestr="%H:%M" --timepos="ix-200:iy-80" --timecolor=$fg_text_str --timefont="Oswald" --timesize=112 --datestr="%A, %d" --datepos="ix-200:iy-30" --datecolor=$fg_text --datefont="Oswald" --datesize=48 --veriftext="ʘ‿ʘ" --wrongtext="ʘ_ʘ" --textsize=40 --modsize=114 --radius=90
 }
 
 case "$1" in

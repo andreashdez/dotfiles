@@ -15,13 +15,18 @@ vsync = "opengl-swc";
 
 # Shadows
 shadow = true;
-no-dock-shadow = false;
+no-dock-shadow = true;
 no-dnd-shadow = true;
 clear-shadow = true;
-shadow-radius = 14;
+#shadow-radius = 16;
+#shadow-offset-x = -4;
+#shadow-offset-y = -4;
 shadow-ignore-shaped = true;
+#shadow-exclude-reg = "x48+0-0";
 shadow-exclude = [
-    "name = 'noshadow'"
+    "name = 'noshadow'",
+    "name = 'Notification'",
+    "_GTK_FRAME_EXTENDS@:c"
 ];
 
 

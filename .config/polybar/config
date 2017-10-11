@@ -5,14 +5,23 @@
 
 
 [color]
-bg          = #d7000000
-sel_bg      = #88000000
-white       = ${xrdb:color15:#d8dee9}
-grey        = ${xrdb:color7:#c0c5ce}
-darkgrey    = ${xrdb:color8:#65737e}
-red         = ${xrdb:color1:#ec5f67}
-yellow      = ${xrdb:color3:#fac863}
-green       = ${xrdb:color2:#99c794}
+bg-0          = #00000000
+bg-1          = #22000000
+
+; red         = ${xrdb:color1}
+; green       = ${xrdb:color2}
+; yellow      = ${xrdb:color3}
+; blue        = ${xrdb:color4}
+; purple      = ${xrdb:color5}
+; cyan        = ${xrdb:color6}
+; grey        = ${xrdb:color7}
+darkgrey    = ${xrdb:color8:#00000000}
+white       = ${xrdb:color15:#00000000}
+
+
+
+[global/wm]
+margin-top = 6
 
 
 
@@ -25,22 +34,25 @@ height = 64
 bottom = true
 fixed-center = true
 
-background = ${color.bg}
-foreground = ${color.grey}
+foreground = ${color.white}
+background-0 = ${color.bg-0}
+background-1 = ${color.bg-1}
 
 line-size = 2
 
 module-margin-left = 5
-padding-right = 5
-padding-left = 4
+padding-right = 8
+padding-left = 7
 
 font-0 = Oswald:size=20;4
-font-1 = Noto Emoji:size=14;3
-font-2 = FontAwesome:size=14;3
+font-1 = FontAwesome:size=14;3
+font-2 = Material Icons:size=17;5
+font-3 = Noto Emoji:size=14;3
+font-4 = Iosevka:size=24;4
 
-modules-left = bspwm
+modules-left = bspwm mpd_progress
 modules-center =
-modules-right = volume backlight keyboard wlan filesystem battery date
+modules-right = volume backlight wlan filesystem battery date
 
 
 
@@ -52,7 +64,7 @@ bottom = true
 fixed-center = true
 
 background = ${color.bg}
-foreground = ${color.grey}
+foreground = ${color.white}
 
 line-size = 2
 
@@ -83,7 +95,6 @@ format = <label-state> <label-mode>
 
 label-focused = 
 label-focused-foreground = ${color.white}
-label-focused-background = ${color.sel_bg}
 label-focused-underline = ${color.white}
 label-focused-padding = 5
 label-focused-margin-left = 1
@@ -93,9 +104,8 @@ label-occupied-foreground = ${color.white}
 label-occupied-padding = 5
 label-occupied-margin-left = 1
 
-label-urgent = 
-label-urgent-foreground = ${color.red}
-label-urgent-underline = ${color.red}
+label-urgent = 
+label-urgent-underline = ${color.white}
 label-urgent-padding = 5
 label-urgent-margin-left = 1
 
@@ -104,35 +114,47 @@ label-empty-foreground = ${color.darkgrey}
 label-empty-padding = 5
 label-empty-margin-left = 1
 
-label-monocle = monocle
-label-monocle-background = ${color.sel_bg}
+label-monocle = 
 label-monocle-underline = ${color.white}
 label-monocle-padding-right = 5
 
-label-floating = floating
-label-floating-background = ${color.sel_bg}
+label-floating = 
 label-floating-underline = ${color.white}
 label-floating-padding-right = 5
 
-label-pseudotiled = pseudotiled
-label-pseudotiled-background = ${color.sel_bg}
+label-pseudotiled = 
 label-pseudotiled-underline = ${color.white}
 label-pseudotiled-padding-right = 5
 
 label-locked = locked
-label-locked-background = ${color.sel_bg}
 label-locked-underline = ${color.white}
 label-locked-padding-right = 5
 
 label-sticky = sticky
-label-sticky-background = ${color.sel_bg}
 label-sticky-underline = ${color.white}
 label-sticky-padding-right = 5
 
 label-private = private
-label-private-background = ${color.sel_bg}
 label-private-underline = ${color.white}
 label-private-padding-right = 5
+
+
+
+[module/mpd_progress]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+
+format-online = <bar-progress> <label-song>
+
+bar-progress-width = 48
+bar-progress-indicator = ▒
+bar-progress-fill = ▒
+bar-progress-empty-foreground = ${color.darkgrey}
+bar-progress-empty = ░
+
+label-song-foreground = ${color.darkgrey}
+label-song = ┊ %artist% - %title%
 
 
 
@@ -145,9 +167,9 @@ time = %H:%M
 time-alt = %H:%M
 
 format = <label>
-format-background = ${color.sel_bg}
-
-label = %date%  |  %time%
+; format-background = ${color.sel_bg}
+
+label = %date% ┊ %time%
 label-underline = ${color.white}
 label-padding = 5
 
@@ -160,17 +182,15 @@ adapter = AC
 poll-interval = 5
 time-format = %H:%M
 
-format-charging = <ramp-capacity>  <label-charging>
+format-charging = <label-charging>
 format-discharging = <ramp-capacity>  <label-discharging>
-format-full = <ramp-capacity>  <label-full>
+format-full = <label-full>
 
-label-charging = %percentage%% (%time%)
-label-charging-foreground = ${color.green}
+label-charging =   %time% ┊ %percentage%%
 
-label-discharging = %percentage%% (%time%)
-label-discharging-foreground = ${color.yellow}
+label-discharging = %time% ┊ %percentage%%
 
-label-full = %percentage%%
+label-full =   full
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -185,13 +205,12 @@ type = internal/backlight
 card = intel_backlight
 
 format = <ramp>  <label>
-label = %percentage%%
+label = %percentage%
 
-ramp-0 = 🌕
-ramp-1 = 🌔
-ramp-2 = 🌓
-ramp-3 = 🌒
-ramp-4 = 🌑
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
 
 
 
@@ -201,13 +220,13 @@ type = internal/volume
 format-volume = <ramp-volume>  <label-volume>
 format-muted = <label-muted>
 
-label-volume = %percentage%%
-label-muted = 🔇  %percentage%%
+label-volume = %percentage%
+label-muted =   %percentage%
 label-muted-foreground = ${color.darkgrey}
 
-ramp-volume-0 = 🔈
-ramp-volume-1 = 🔉
-ramp-volume-2 = 🔊
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 
 
@@ -222,7 +241,7 @@ format-mounted = <label-mounted>
 format-unmounted = <label-unmounted>
 
 label-mounted =   %free%
-label-unmounted =   no mount
+label-unmounted =   empty
 label-unmounted-foreground = ${color.darkgrey}
 
 
@@ -236,14 +255,14 @@ format-connected = <ramp-signal>  <label-connected>
 format-disconnected = <label-disconnected>
 
 label-connected = %essid%
-label-disconnected =   no network
+label-disconnected =   disconnected
 label-disconnected-foreground = ${color.darkgrey}
 
-ramp-signal-0 = 
-ramp-signal-0-foreground = ${color.red}
-ramp-signal-1 = 
-ramp-signal-1-foreground = ${color.yellow}
-ramp-signal-2 = 
+ramp-signal-0 = 
+ramp-signal-0-foreground = ${color.darkgrey}
+ramp-signal-1 = 
+ramp-signal-1-foreground = ${color.darkgrey}
+ramp-signal-2 = 
 
 
 
@@ -252,5 +271,5 @@ type = internal/xkeyboard
 
 format = <label-layout>
 
-label-layout =    %name%
+label-layout =   %name%
 
