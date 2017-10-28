@@ -8,13 +8,6 @@
 bg-0          = #00000000
 bg-1          = #22000000
 
-; red         = ${xrdb:color1}
-; green       = ${xrdb:color2}
-; yellow      = ${xrdb:color3}
-; blue        = ${xrdb:color4}
-; purple      = ${xrdb:color5}
-; cyan        = ${xrdb:color6}
-; grey        = ${xrdb:color7}
 darkgrey    = ${xrdb:color8:#00000000}
 white       = ${xrdb:color15:#00000000}
 
@@ -25,20 +18,21 @@ margin-top = 6
 
 
 
+; -------------------------------------
 ; BARS
 
 [bar/bottom]
-monitor = eDP-1
-width = 100%
-height = 64
-bottom = true
+monitor      = eDP1
+width        = 100%
+height       = 64
+bottom       = true
 fixed-center = true
 
-foreground = ${color.white}
+foreground   = ${color.white}
 background-0 = ${color.bg-0}
 background-1 = ${color.bg-1}
 
-line-size = 2
+line-size    = 2
 
 module-margin-left = 5
 padding-right = 8
@@ -57,24 +51,27 @@ modules-right = volume backlight wlan filesystem battery date
 
 
 [bar/bottom_ext]
-monitor = HDMI-1
-width = 100%
-height = 26
-bottom = true
+monitor      = HDMI-1
+width        = 100%
+height       = 32
+bottom       = true
 fixed-center = true
 
-background = ${color.bg}
-foreground = ${color.white}
+foreground   = ${color.white}
+background-0 = ${color.bg-0}
+background-1 = ${color.bg-1}
 
-line-size = 2
+line-size    = 2
 
 module-margin-left = 5
 padding-right = 5
 padding-left = 4
 
-font-0 = Archivo Narrow:size=11;2
-font-1 = Noto Emoji:size=8;2
-font-2 = FontAwesome:size=8;2
+font-0 = Oswald:size=10;4
+font-1 = FontAwesome:size=7;3
+font-2 = Material Icons:size=8;5
+font-3 = Noto Emoji:size=7;3
+font-4 = Iosevka:size=12;4
 
 modules-left = bspwm
 modules-center =
@@ -82,6 +79,7 @@ modules-right = date
 
 
 
+; -------------------------------------
 ; MODULES
 
 [module/bspwm]
@@ -167,8 +165,7 @@ time = %H:%M
 time-alt = %H:%M
 
 format = <label>
-; format-background = ${color.sel_bg}
-
+
 label = %date% ┊ %time%
 label-underline = ${color.white}
 label-padding = 5
@@ -254,7 +251,7 @@ interval = 5
 format-connected = <ramp-signal>  <label-connected>
 format-disconnected = <label-disconnected>
 
-label-connected = %essid%
+label-connected = %essid% ┊ %signal%
 label-disconnected =   disconnected
 label-disconnected-foreground = ${color.darkgrey}
 

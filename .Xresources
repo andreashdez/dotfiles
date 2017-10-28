@@ -9,3 +9,7 @@ Xft.autohint:           true
 Xft.hintstyle:          hintfull
 Xft.lcdfilter:          lcddefault
 
+urxvt.scrollBar:        false
+urxvt.font:             xft:Iosevka Term:pixelsize=32
+URxvt.internalBorder:   48
+

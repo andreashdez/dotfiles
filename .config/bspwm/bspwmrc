@@ -11,22 +11,21 @@
 xsetroot -cursor_name left_ptr &
 setxkbmap -layout "gb,es" -option "grp:shifts_toggle" &
 
-#xrandr --output HDMI-1 --dpi 100 --right-of eDP-1 &
-xrandr --output eDP-1 --dpi 200 --primary &
+xrandr --output HDMI1 --dpi 100 --right-of eDP1 &
+xrandr --output eDP1 --dpi 200 --primary &
 
 wal -R &
 
-/usr/lib/gnome-settings-daemon/gsd-xsettings &
+#/usr/lib/gnome-settings-daemon/gsd-xsettings &
 
 redshift &
+sxhkd &
+
+bspc monitor eDP1 -d 1 2 3 4 5 6
+bspc monitor HDMI1 -d 7 8 9 0
 
 ~/.bin/launch_compton &
 ~/.bin/launch_polybar &
-
-sxhkd &
-
-bspc monitor eDP-1 -d 1 2 3 4 5 6
-bspc monitor HDMI-1 -d 7 8 9 0
 
 
 

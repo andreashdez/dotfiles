@@ -8,9 +8,10 @@ export EDITOR=nvim
 export TERMINAL=termite
 export PAGER=most
 export MANPAGER=$PAGER
+export PATH=$HOME/.cargo/bin:$PATH
 #export GDK_SCALE=2
 #export PYTHONPATH=$PYTHONPATH:$HOME/Diss/models:$HOME/Diss/models/slim:$HOME/Diss/darkflow
 
 
-xrdb -merge ~/.Xresources
+xrdb ~/.Xresources
 

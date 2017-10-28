@@ -57,9 +57,14 @@ map <Space><Space> :NERDTreeTabsToggle<CR>
 
 " }}} Plugin settings
 
+
+" Syntax highlighting
+syntax on
+colorscheme wal
+
+
 " Some configurations
 set encoding=utf-8
-set cursorline
 set backspace=indent,eol,start
 set autowrite
 set autoread
@@ -68,14 +73,14 @@ set shortmess=atToOI
 set mouse=a
 
 
-" Syntax highlighting
-syntax on
-colorscheme wal
-
-
 " Title and hidden buffers
 set title
 set hidden
+
+
+" Show cursor line
+set cursorline
+hi CursorLine cterm=NONE
 
 
 " Show line length

@@ -7,30 +7,25 @@
 ! General
 
 rofi.case-sensitive:    false
-rofi.cycle:             false
 rofi.scroll-method:     1
 
 
 
-! Theming
+! Matching
 
-rofi.font:              Oswald 20
-!rofi.font:              Archivo Narrow 20
-!                       bg       fg       altbg    hlbg     hlfg
-!rofi.color-normal:      #1b2b34, #c0c5ce, #1b2b34, #c0c5ce, #1b2b34
-!rofi.color-urgent:      #1b2b34, #c0c5ce, #1b2b34, #c0c5ce, #1b2b34
-!rofi.color-active:      #1b2b34, #c0c5ce, #1b2b34, #c0c5ce, #1b2b34
-!rofi.color-window:      #1b2b34, #1b2b34
-rofi.line-margin:       10
-rofi.separator-style:   none
-rofi.hide-scrollbar:    true
+rofi.matching:          fuzzy
 
 
 
 ! Layout
 
-rofi.padding:		886
-rofi.fullscreen:        true
 rofi.auto-select:       true
 rofi.dpi:               200
+rofi.theme:             themes/wal.rasi
+
+
+
+! Pattern
+
+rofi.terminal:          termite
 

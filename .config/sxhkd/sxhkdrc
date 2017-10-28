@@ -79,6 +79,14 @@ super + y
 super + g
         bspc node -s biggest
 
+# Mirror and flip leaves of tree
+super + {comma,period}
+        bspc desktop -F {horizontal,vertical}
+
+# Rotate leaves of tree
+super + shift + {comma,period}
+        bspc desktop -R {90,270}
+
 
 
 #
@@ -104,8 +112,8 @@ super + {_,shift + }{h,j,k,l}
         bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
-super + {p,b,comma,period}
-        bspc node -f @{parent,brother,first,second}
+#super + {p,b,comma,period}
+        #bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous node
 super + {_,shift + }c
@@ -168,4 +176,22 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
         bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+
+#
+# mouse bindings
+#
+
+# Move or resize window
+alt + button{1-3}
+        bspc pointer -g {move,resize_side,resize_corner}
+
+# Needed for ^^^^
+alt + !button{1-3}
+        bspc pointer -t %i %i
+
+
+super + @button{1-3}
+        bspc pointer -u
 
