@@ -8,8 +8,8 @@
 
 
 * {
-    bg:                 #1e2945;
-    fg:                 #fce3d4aa;
+    bg:                 #25292c;
+    fg:                 #d0decfaa;
 
     background-color:   @bg;
     text-color:         @fg;
@@ -34,14 +34,16 @@
 
 
 #inputbar {
-    padding:            0px 20px 0px;
+    padding:            0px 20px 16px;
     spacing:            8px;
 }
 
 
 
 #listview {
-    padding:            32px 0px 0px;
+    padding:            16px 0px 0px;
+    border:             2px dash 0px 0px;
+    border-color:       @fg;
     cycle:              false;
     scrollbar:          false;
     spacing:            2px;

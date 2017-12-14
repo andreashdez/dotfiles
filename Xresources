@@ -1,0 +1,27 @@
+! .Xresources
+
+! main config
+Xft.dpi:                200
+Xft.antialias:          true
+Xft.hinting:            true
+Xft.rgba:               rgba
+Xft.autohint:           true
+Xft.hintstyle:          hintfull
+Xft.lcdfilter:          lcddefault
+
+!urxvt.scrollBar:        false
+!urxvt.font:             xft:Iosevka Term:pixelsize=34
+!urxvt.internalBorder:   48
+
+! 2bwm (testing)
+twobwm.border_width: 4
+twobwm.outer_border: 4
+twobwm.focus_color: #D0DECF
+twobwm.unfocus_color: #25282C
+twobwm.fixed_color: #5996A7
+twobwm.unkill_color: #66A8B1
+twobwm.outer_border_color: #25282C
+twobwm.fixed_unkill_color: #25282C
+twobwm.inverted_colors: false
+twobwm.enable_compton: true
+

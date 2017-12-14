@@ -52,6 +52,10 @@ fade-out-step = 0.05;
 
 # Specific window type
 wintypes: {
-    tooltip = { fade = true; shadow = false; opacity = 1.00; focus = true; };
+    tooltip         = { fade = true; shadow = false; opacity = 0.98; focus = true; };
+    menu            = { fade = true; shadow = false; opacity = 0.98; focus = true; };
+    dropdown_menu   = { fade = true; shadow = false; opacity = 0.98; focus = true; };
+    popup_menu      = { fade = true; shadow = false; opacity = 0.98; focus = true; };
+    utility         = { fade = true; shadow = false; opacity = 0.98; focus = true; };
 };
 

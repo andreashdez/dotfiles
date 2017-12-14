@@ -5,11 +5,10 @@
 
 
 [color]
-bg-0          = #00000000
-bg-1          = #22000000
-
-darkgrey    = ${xrdb:color8:#00000000}
-white       = ${xrdb:color15:#00000000}
+bg-0        = #00000000
+bg-1        = #22000000
+darkgrey    = ${xrdb:color8}
+white       = ${xrdb:color15}
 
 
 
@@ -27,6 +26,8 @@ width        = 100%
 height       = 64
 bottom       = true
 fixed-center = true
+
+cursor-click = pointer
 
 foreground   = ${color.white}
 background-0 = ${color.bg-0}
@@ -51,7 +52,7 @@ modules-right = volume backlight wlan filesystem battery date
 
 
 [bar/bottom_ext]
-monitor      = HDMI-1
+monitor      = HDMI1
 width        = 100%
 height       = 32
 bottom       = true
@@ -159,8 +160,8 @@ label-song = ┊ %artist% - %title%
 [module/date]
 type = internal/date
 interval = 5
-date = %A, %-d
-date-alt = %A, %-d of %B
+date = %A %e
+date-alt = %A %e of %B
 time = %H:%M
 time-alt = %H:%M
 

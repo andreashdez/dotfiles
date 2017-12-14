@@ -4,13 +4,11 @@ Primarily intended for personal use, this repo contains configuration files for 
 
 - bspwm
 - compton
-- i3-gaps
-- i3lock-color
+- ncmpcpp
 - neovim
 - polybar
 - rofi
 - sxhkd
 - termite
 - weechat
-- zsh
-
+- zathura

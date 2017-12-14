@@ -1,6 +1,7 @@
 # ~/.config/sxhkd/sxhkdrc
 # -------------------------------------
 # sxhkd configuration file
+# for more options check 'man sxhkd'
 
 
 
@@ -17,6 +18,10 @@ super + shift + Return
 # program launcher
 super + space
         rofi -show drun
+
+# another way of switching keyboard layout
+super + shift + k
+        xkb-switch -s $(xkb-switch -l | rofi -dmenu)
 
 # reload sxhk config file
 super + Escape
@@ -40,19 +45,19 @@ XF86AudioNext
 
 # screenshots
 Print
-        scrot ~/Pictures/Screenshot_%Y-%m-%d_%H-%M-%S.png
+        scrot $HOME/Pictures/Screenshot_%Y-%m-%d_%H-%M-%S.png
 ctrl + Print
-        scrot -u -b ~/Pictures/Screenshot_%Y-%m-%d_%H-%M-%S.png
+        scrot -u -b $HOME/Pictures/Screenshot_%Y-%m-%d_%H-%M-%S.png
 
 # exit wm
 super + shift + r
-        ~/.bin/wmexit reboot
+        $HOME/.bin/quit.sh reboot
 super + shift + s
-        ~/.bin/wmexit shutdown
+        $HOME/.bin/quit.sh shutdown
 super + shift + e
-        ~/.bin/wmexit lock
+        $HOME/.bin/quit.sh lock
 super + ctrl + shift + s
-        ~/.bin/wmexit suspend
+        $HOME/.bin/quit.sh suspend
 
 
 

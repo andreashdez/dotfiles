@@ -8,7 +8,7 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 
 polybar bottom &
 
-if xrandr | grep "HDMI-1 connected"; then
+if xrandr | grep "HDMI1 connected"; then
     polybar bottom_ext &
 fi
 

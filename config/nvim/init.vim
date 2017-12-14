@@ -9,6 +9,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'dylanaraps/wal.vim'
 Plug 'ervandew/supertab'
+"Plug 'itchyny/lightline.vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -24,8 +25,9 @@ call plug#end()
 
 " {{{ Plugin settings
 
-" Setup vim-airline
+"" Setup vim-airline
 let g:airline_section=''
+"let g:airline_extensions=[]
 let g:airline_detect_paste=1
 let g:airline_powerline_fonts=1
 let g:airline_theme='wal'
@@ -35,8 +37,9 @@ let g:airline_right_sep = '▒'
 let g:airline_left_alt_sep = ''
 let g:airline_right_alt_sep = ''
 
-"let g:airline_left_alt_sep = '▏'
-"let g:airline_right_alt_sep = '▕'
+
+" Setup lightline
+"let g:lightline={'colorscheme': 'powerline'}
 
 
 " Syntastic stuff
