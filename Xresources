@@ -9,9 +9,11 @@ Xft.autohint:           true
 Xft.hintstyle:          hintfull
 Xft.lcdfilter:          lcddefault
 
-!urxvt.scrollBar:        false
-!urxvt.font:             xft:Iosevka Term:pixelsize=34
-!urxvt.internalBorder:   48
+! urxvt.scrollBar:        false
+! urxvt.font:             xft:Iosevka Term:pixelsize=34
+! urxvt.internalBorder:   48
+! XTerm*font:             xft:Iosevka-Term*12
+! XTerm*internalBorder:   48
 
 ! 2bwm (testing)
 twobwm.border_width: 4
@@ -22,6 +24,6 @@ twobwm.fixed_color: #5996A7
 twobwm.unkill_color: #66A8B1
 twobwm.outer_border_color: #25282C
 twobwm.fixed_unkill_color: #25282C
-twobwm.inverted_colors: false
+! twobwm.inverted_colors: false
 twobwm.enable_compton: true
 

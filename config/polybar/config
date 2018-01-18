@@ -13,7 +13,7 @@ white       = ${xrdb:color15}
 
 
 [global/wm]
-margin-top = 6
+margin-top = 2
 
 
 
@@ -35,17 +35,15 @@ background-1 = ${color.bg-1}
 
 line-size    = 2
 
-module-margin-left = 5
-padding-right = 8
-padding-left = 7
+module-margin-left = 2
+padding-right = 3
+padding-left = 2
 
-font-0 = Oswald:size=20;4
-font-1 = FontAwesome:size=14;3
-font-2 = Material Icons:size=17;5
-font-3 = Noto Emoji:size=14;3
-font-4 = Iosevka:size=24;4
+font-0 = Iosevka:size=20;4
+font-1 = Material Icons:size=18;5
+;font-3 = Noto Emoji:size=14;3
 
-modules-left = bspwm mpd_progress
+modules-left = bspwm
 modules-center =
 modules-right = volume backlight wlan filesystem battery date
 
@@ -64,15 +62,13 @@ background-1 = ${color.bg-1}
 
 line-size    = 2
 
-module-margin-left = 5
-padding-right = 5
-padding-left = 4
+module-margin-left = 2
+padding-right = 3
+padding-left = 2
 
-font-0 = Oswald:size=10;4
-font-1 = FontAwesome:size=7;3
-font-2 = Material Icons:size=8;5
-font-3 = Noto Emoji:size=7;3
-font-4 = Iosevka:size=12;4
+font-0 = Iosevka:size=20;4
+font-1 = Material Icons:size=18;5
+;font-3 = Noto Emoji:size=14;3
 
 modules-left = bspwm
 modules-center =
@@ -88,54 +84,60 @@ type = internal/bspwm
 inline-mode = true
 enable-scroll = false
 
-ws-icon-default = 
+ws-icon-0       = 1;
+ws-icon-1       = 2;
+ws-icon-2       = 3;
+ws-icon-3       = 4;
+ws-icon-4       = 5;
+ws-icon-5       = 6;
+ws-icon-default = 
 
 format = <label-state> <label-mode>
 
-label-focused = 
+label-focused = %icon%
 label-focused-foreground = ${color.white}
 label-focused-underline = ${color.white}
-label-focused-padding = 5
+label-focused-padding = 2
 label-focused-margin-left = 1
 
-label-occupied = 
+label-occupied = %icon%
 label-occupied-foreground = ${color.white}
-label-occupied-padding = 5
+label-occupied-padding = 2
 label-occupied-margin-left = 1
 
-label-urgent = 
+label-urgent = %icon%
 label-urgent-underline = ${color.white}
-label-urgent-padding = 5
+label-urgent-padding = 2
 label-urgent-margin-left = 1
 
 label-empty = %icon%
 label-empty-foreground = ${color.darkgrey}
-label-empty-padding = 5
+label-empty-padding = 2
 label-empty-margin-left = 1
 
-label-monocle = 
+label-monocle = 
 label-monocle-underline = ${color.white}
-label-monocle-padding-right = 5
+label-monocle-padding-right = 2
 
-label-floating = 
+label-floating = 
 label-floating-underline = ${color.white}
-label-floating-padding-right = 5
+label-floating-padding-right = 2
 
-label-pseudotiled = 
+label-pseudotiled = 
 label-pseudotiled-underline = ${color.white}
-label-pseudotiled-padding-right = 5
+label-pseudotiled-padding-right = 2
 
-label-locked = locked
+label-locked = 
 label-locked-underline = ${color.white}
-label-locked-padding-right = 5
+label-locked-padding-right = 2
 
-label-sticky = sticky
+label-sticky = 
 label-sticky-underline = ${color.white}
-label-sticky-padding-right = 5
+label-sticky-padding-right = 2
 
-label-private = private
+label-private = 
 label-private-underline = ${color.white}
-label-private-padding-right = 5
+label-private-padding-right = 2
 
 
 
@@ -169,7 +171,7 @@ format = <label>
 
 label = %date% ┊ %time%
 label-underline = ${color.white}
-label-padding = 5
+label-padding = 2
 
 
 
@@ -181,14 +183,14 @@ poll-interval = 5
 time-format = %H:%M
 
 format-charging = <label-charging>
-format-discharging = <ramp-capacity>  <label-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
 format-full = <label-full>
 
-label-charging =   %time% ┊ %percentage%%
+label-charging =  %time% ┊ %percentage%%
 
 label-discharging = %time% ┊ %percentage%%
 
-label-full =   full
+label-full =  full
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -202,24 +204,24 @@ ramp-capacity-4 = 
 type = internal/backlight
 card = intel_backlight
 
-format = <ramp>  <label>
+format = <ramp> <label>
 label = %percentage%
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 
 
 
 [module/volume]
 type = internal/volume
 
-format-volume = <ramp-volume>  <label-volume>
+format-volume =  <label-volume>
+;format-volume = <ramp-volume> <label-volume>
 format-muted = <label-muted>
 
 label-volume = %percentage%
-label-muted =   %percentage%
+label-muted =  %percentage%
 label-muted-foreground = ${color.darkgrey}
 
 ramp-volume-0 = 
@@ -233,13 +235,13 @@ type = internal/fs
 mount-0 = /mnt/ntfs
 mount-1 = /
 fixed-values = true
-spacing = 5
+spacing = 2
 
 format-mounted = <label-mounted>
 format-unmounted = <label-unmounted>
 
-label-mounted =   %free%
-label-unmounted =   empty
+label-mounted =  %free%
+label-unmounted =  empty
 label-unmounted-foreground = ${color.darkgrey}
 
 
@@ -249,18 +251,18 @@ type = internal/network
 interface = wlp2s0
 interval = 5
 
-format-connected = <ramp-signal>  <label-connected>
+format-connected = <ramp-signal> <label-connected>
 format-disconnected = <label-disconnected>
 
 label-connected = %essid% ┊ %signal%
-label-disconnected =   disconnected
+label-disconnected =  disconnected
 label-disconnected-foreground = ${color.darkgrey}
 
-ramp-signal-0 = 
+ramp-signal-0 = 
 ramp-signal-0-foreground = ${color.darkgrey}
-ramp-signal-1 = 
+ramp-signal-1 = 
 ramp-signal-1-foreground = ${color.darkgrey}
-ramp-signal-2 = 
+ramp-signal-2 = 
 
 
 
@@ -269,5 +271,5 @@ type = internal/xkeyboard
 
 format = <label-layout>
 
-label-layout =   %name%
+label-layout =  %name%
 

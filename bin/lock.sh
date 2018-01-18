@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. "${HOME}/.wallpapers/current.sh"
+. "$HOME/.wallpapers/current.sh"
 
 bg_inside="${color5}44"
 bg_ver="${color3}44"
@@ -13,13 +13,13 @@ fg_text="${color5}ff"
 fg_text_str="${color7}ff"
 
 i3lock \
-    -i "$wallpaper" --tiling \
+    --image=$wallpaper --tiling \
     --insidevercolor=$bg_ver --insidewrongcolor=$bg_wrong --insidecolor=$bg_inside \
     --ringvercolor=$fg_ver --ringwrongcolor=$fg_wrong --ringcolor=$fg_ring \
     --linecolor=$fg_ring --separatorcolor=$fg_action --textcolor=$fg_text \
     --keyhlcolor=$fg_action --bshlcolor=$fg_action \
-    --line-uses-inside \
     --force-clock --composite \
+    --line-uses-inside \
     --indpos="x+430:h-124" \
     --time-align=1 --date-align=1 --layout-align=1 \
     --timestr="%H:%M" \

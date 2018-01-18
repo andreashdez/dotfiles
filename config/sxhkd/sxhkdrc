@@ -20,8 +20,8 @@ super + space
         rofi -show drun
 
 # another way of switching keyboard layout
-super + shift + k
-        xkb-switch -s $(xkb-switch -l | rofi -dmenu)
+# super + shift + k
+#         xkb-switch -s $(xkb-switch -l | rofi -dmenu)
 
 # reload sxhk config file
 super + Escape

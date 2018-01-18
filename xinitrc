@@ -2,16 +2,16 @@
 
 export TERM=xterm-256color
 export EDITOR=nvim
-export TERMINAL=termite
 export PAGER=most
 export MANPAGER=$PAGER
 export BROSWER=google-chrome-stable
-export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/go/bin:$HOME/.cargo/bin:$PATH
+export GOPATH=$HOME/go
 export _JAVA_AWT_WM_NONREPARENTING=1
-#export GDK_SCALE=2
+export MOZ_USE_XINPUT2=1
 
-xrdb -merge $HOME/.Xresources
 xrdb -merge $HOME/.wallpapers/current.Xres
+xrdb -merge $HOME/.Xresources
 
 xrandr --output HDMI-1 --dpi 100 --right-of eDP-1
 xrandr --output eDP-1 --dpi 200 --primary
@@ -23,10 +23,9 @@ $HOME/.wallpapers/wp_init.sh &
 $HOME/.bin/launch_compton.sh &
 $HOME/.bin/launch_polybar.sh &
 
-# bspwm
 exec bspwm
+# exec openbox
 
-# 2bwm
-#2bwm &
-#exec termite
+# 2bwm &
+# exec termite
 

@@ -6,24 +6,25 @@
 
 # Directories #################################################################
 
-ncmpcpp_directory = ~/.config/ncmpcpp
-#lyrics_directory = ~/.lyrics
+ncmpcpp_directory = "~/.config/ncmpcpp"
+#lyrics_directory = "~/.lyrics"
 
 
 
 # Connection settings #########################################################
 
-mpd_host = 127.0.0.1
-mpd_port = 6600
+mpd_host = "localhost"
+mpd_port = "6600"
 
 # Needed for tag editor and file operations to work.
-mpd_music_dir = /mnt/ntfs/Users/andre/Music
+mpd_music_dir = "/mnt/ntfs/Users/andre/Music"
+mpd_crossfade_time = "5"
 
 
 
 # Visualizer ##################################################################
 
-visualizer_fifo_path = /tmp/mpd.fifo
+visualizer_fifo_path = "/tmp/mpd.fifo"
 
 # Note: Below parameter is needed for ncmpcpp to determine which output
 # provides data for visualizer and thus allow syncing between visualization and
@@ -31,29 +32,41 @@ visualizer_fifo_path = /tmp/mpd.fifo
 visualizer_output_name = "Visualizer feed"
 
 # If you set format to 44100:16:2, make it 'yes'.
-visualizer_in_stereo = yes
+visualizer_in_stereo = "yes"
 
 # Note: Below parameter defines how often ncmpcpp has to "synchronize"
 # visualizer and audio outputs. 30 seconds is optimal value, but if you
 # experience synchronization problems, set it to lower value. Keep in mind that
 # sane values start with >=10.
-visualizer_sync_interval = 30
+visualizer_sync_interval = "30"
 
 # Available values: spectrum, wave, wave_filled, ellipse.
-visualizer_type = spectrum
+visualizer_type = "ellipse"
 
-visualizer_look = ●▊
+visualizer_look = "●▋"
 
 # Alternative subset of 256 colors for terminals that support it.
-visualizer_color = 9, 3, 4, 5, 6, 7, 8, 8, 10, 2
+visualizer_color ="white,blue,black,blue"
 
 
 
-# UI look #####################################################################
+# Look and feel ###############################################################
 
-#progressbar_look = "━╾─"
-progressbar_look = "▓█░"
+playlist_disable_highlight_delay = 1
+message_delay_time = 1
 
-header_visibility = no
-titles_visibility = no
+song_columns_list_format = "(45)[red]{a|A} (6f)[white]{lr} (45)[blue]{tr}"
+
+progressbar_look = "▒▒░"
+progressbar_color = "black:b"
+progressbar_elapsed_color = "white:b"
+
+
+header_visibility = "no"
+titles_visibility = "no"
+statusbar_visibility = "no"
+
+lines_scrolled = "1"
+autocenter_mode = "yes"
+centered_cursor = "yes"
 
