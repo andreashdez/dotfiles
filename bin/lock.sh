@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. "$HOME/.wallpapers/current.sh"
+. "$HOME/.cache/wal/colors.sh"
 
 bg_inside="${color5}44"
 bg_ver="${color3}44"

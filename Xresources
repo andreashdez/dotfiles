@@ -9,6 +9,8 @@ Xft.autohint:           true
 Xft.hintstyle:          hintfull
 Xft.lcdfilter:          lcddefault
 
+Xcursor.theme:          Paper
+
 ! urxvt.scrollBar:        false
 ! urxvt.font:             xft:Iosevka Term:pixelsize=34
 ! urxvt.internalBorder:   48
@@ -16,8 +18,8 @@ Xft.lcdfilter:          lcddefault
 ! XTerm*internalBorder:   48
 
 ! 2bwm (testing)
-twobwm.border_width: 4
-twobwm.outer_border: 4
+! twobwm.border_width: 4
+! twobwm.outer_border: 4
 twobwm.focus_color: #D0DECF
 twobwm.unfocus_color: #25282C
 twobwm.fixed_color: #5996A7

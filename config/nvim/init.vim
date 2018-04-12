@@ -6,111 +6,116 @@
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'dylanaraps/wal.vim'
-"Plug 'ervandew/supertab'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'jiangmiao/auto-pairs'
-Plug 'lervag/vimtex'
+" Language support
 Plug 'rust-lang/rust.vim'
+" Plug 'lervag/vimtex'
+
+" Easier code editing
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
+
+" Some enhancements
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tpope/vim-sensible'
-Plug 'vim-airline/vim-airline'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'vim-syntastic/syntastic'
+
+" Look and feel
+Plug 'vim-airline/vim-airline'
+Plug 'dylanaraps/wal.vim'
 
 call plug#end()
 
-" {{{ Plugin settings
 
-""" Setup vim-airline
-let g:airline_section=''
-let g:airline_detect_paste=1
-let g:airline_powerline_fonts=1
-let g:airline_left_sep='▒'
-let g:airline_right_sep='▒'
-let g:airline_left_alt_sep=''
-let g:airline_right_alt_sep=''
+" -------------------------------------
+" Plugin settings
+
+" VimAirline config
+let g:airline_section         =''
+let g:airline_detect_paste    =1
+let g:airline_powerline_fonts =1
+let g:airline_left_sep        ='▒'
+let g:airline_right_sep       ='▒'
+let g:airline_left_alt_sep    =''
+let g:airline_right_alt_sep   =''
+let g:airline_section_z       =airline#section#create(['%3l', ':%-3v', ' ┊ %3p%%'])
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
-let g:airline_section_z=airline#section#create(['%3l', ':%-3v', ' ┊ %3p%%'])
 
 
 " Syntastic stuff
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlage()}
-set statusline+=%*
+set statusline +=%#warningmsg#
+set statusline +=%{SyntasticStatuslineFlage()}
+set statusline +=%*
 
 
-" Syntastic configuration
-let g:syntastic_always_populate_loc_list=1
-""let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
+" Syntastic config
+let g:syntastic_always_populate_loc_list =1
+let g:syntastic_check_on_open            =1
+let g:syntastic_check_on_wq              =0
 
 
-" NerdCommenter
-let g:NERDSpaceDelims=1
-let g:NERDCompactSexyComs=1
-let g:NERDDefaultAlign='left'
-let g:NERDCommentEmptyLines=1
-let g:NERDTrimTrailingWhitespace=1
+" NerdCommenter config
+let g:NERDSpaceDelims            =1
+let g:NERDCompactSexyComs        =1
+let g:NERDDefaultAlign           ='left'
+let g:NERDCommentEmptyLines      =1
+let g:NERDTrimTrailingWhitespace =1
 
 
 " NerdTree toggle
 map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "⭔",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "⭒",
+    \ "Renamed"   : "⮕",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✘",
+    \ "Clean"     : "✔︎",
+    \ "Ignored"   : "i",
+    \ "Unknown"   : "?"
+    \ }
 
-" }}} Plugin settings
 
+" BetterWhitespace config
+let g:strip_whitespace_on_save      =1
+let g:show_spaces_that_precede_tabs =1
+
+
+" -------------------------------------
+" NeoVim settings
 
 " Syntax highlighting
 colorscheme wal
 
 
 " Some configurations
-set encoding=utf-8
 set autowrite
-set autoread
-set showmatch
-set shortmess=atToOI
-set mouse=a
+set shortmess  =oOstTI
+set mouse      =a
 set noshowmode
 
 
-" Title and hidden buffers
-"set title
-"set hidden
-
-
-" Show cursor line
-"set cursorline
+" Remove underlining (decorations)
 hi CursorLine cterm=NONE
 
 
 " Line Numbers
 set number
-set numberwidth=3
+set numberwidth =3
 
 
 " Show line length
-set textwidth=79
-set wrap
 set linebreak
-set formatoptions-=t
-
-
-" Auto remove all trailing whitespace on save
-autocmd BufEnter * EnableStripWhitespaceOnSave
+set formatoptions -=t
 
 
 " Indent configuration
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-set shiftround
-set breakindent
+set shiftwidth =4
+set tabstop    =4
+set cindent
 
 
 " Disable backup and swap files
@@ -120,14 +125,14 @@ set noswapfile
 
 
 " Nicer scrolling
-set scrolloff=4
-set sidescrolloff=16
-set sidescroll=1
+set scrolloff     =4
+set sidescrolloff =16
+set sidescroll    =1
 
 
 " Tab indents blocks of text in visual mode
 vmap <TAB> >gv
-vmap <BS> <gv
+vmap <BS>  <gv
 
 
 " hjkl-movement between rows when soft wrapping
@@ -145,6 +150,19 @@ vnoremap L $
 
 
 " Move between buffers
-nnoremap <C-k> :bp<CR>
-nnoremap <C-j> :bn<CR>
+nnoremap gb :buffers<CR>:buffer<Space>
+nnoremap K :bp<CR>
+nnoremap J :bn<CR>
+
+
+" Move between splits
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-l> <C-w><C-l>
+
+
+" Open splits after current split
+set splitbelow
+set splitright
 

@@ -55,7 +55,7 @@ visualizer_color ="white,blue,black,blue"
 playlist_disable_highlight_delay = 1
 message_delay_time = 1
 
-song_columns_list_format = "(45)[red]{a|A} (6f)[white]{lr} (45)[blue]{tr}"
+song_columns_list_format = "(45)[red]{a|A} (8f)[white]{lr} (45)[blue]{tr}"
 
 progressbar_look = "▒▒░"
 progressbar_color = "black:b"

@@ -4,6 +4,7 @@ cp $HOME/.bin/* ./bin/
 
 cp -r $HOME/.config/bspwm/ ./config/
 cp -r $HOME/.config/compton/ ./config/
+cp -r $HOME/.config/dunst/ ./config/
 cp -r $HOME/.config/ncmpcpp/ ./config/
 cp -r $HOME/.config/polybar/ ./config/
 cp -r $HOME/.config/rofi/ ./config/
@@ -17,4 +18,3 @@ cp $HOME/.weechat/buffers.conf $HOME/.weechat/weechat.conf ./weechat/
 
 cp $HOME/.xinitrc xinitrc
 cp $HOME/.Xresources Xresources
-

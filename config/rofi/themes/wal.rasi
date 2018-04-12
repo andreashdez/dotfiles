@@ -9,7 +9,7 @@
 
 * {
     bg:                 #25292c;
-    fg:                 #d0decfaa;
+    fg:                 #cdddd9aa;
 
     background-color:   @bg;
     text-color:         @fg;
