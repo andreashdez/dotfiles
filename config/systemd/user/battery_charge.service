@@ -1,0 +1,7 @@
+[Unit]
+Description=Notify about low battery charge.
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /home/andreas/.bin/battery_charge.sh
+

@@ -1,0 +1,10 @@
+[Unit]
+Description=Notify about low battery charge.
+
+[Timer]
+OnUnitActiveSec=10min
+OnBootSec=30s
+
+[Install]
+WantedBy=timers.target
+
