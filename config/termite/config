@@ -14,6 +14,7 @@ hyperlinks          = true
 cursor_blink        = off
 cursor_shape        = block
 dynamic_title       = true
+# font                = scientifica 11
 font                = Iosevka Term 12
 mouse_autohide      = true
 scrollback_lines    = 10000
@@ -27,30 +28,9 @@ urgent_on_bell      = true
 
 [colors]
 
-# background  = #071d22
-# foreground  = #ffffff
-# cursor      = #ffffff
-# color0      = #071d22
-# color1      = #f8a1aa
-# color2      = #8cc495
-# color3      = #f0e0aa
-# color4      = #8ab6c2
-# color5      = #94a9d9
-# color6      = #7eb5ac
-# color7      = #b3bec1
-# color8      = #617278
-# color9      = #e9b3bf
-# color10     = #ade1b6
-# color11     = #fbf1cf
-# color12     = #b5dbe4
-# color13     = #b6cbfa
-# color14     = #a3d0c8
-# color15     = #f7f8f8
-
-
-background  = #25292c
-foreground  = #f1eff0
-cursor      = #f1eff0
+background  = #222326
+foreground  = #c7c8c8
+cursor      = #c7c8c8
 color0      = #47474b
 color1      = #ad7189
 color2      = #a0bc93

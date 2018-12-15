@@ -1,7 +1,7 @@
 ! .Xresources
 
 ! main config
-Xft.dpi:                200
+! Xft.dpi:                200
 Xft.antialias:          true
 Xft.hinting:            true
 Xft.rgba:               rgba
@@ -9,7 +9,8 @@ Xft.autohint:           true
 Xft.hintstyle:          hintfull
 Xft.lcdfilter:          lcddefault
 
-Xcursor.theme:          Paper
+Xcursor.theme:          capitaine-cursors
+! Xcursor.theme:          Paper
 
 ! urxvt.scrollBar:        false
 ! urxvt.font:             xft:Iosevka Term:pixelsize=34

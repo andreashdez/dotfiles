@@ -6,8 +6,8 @@
 
 [color]
 bg-0        = #00000000
-bg-1        = #22000000
-darkgrey    = ${xrdb:color5}
+bg-1        = #33000000
+darkgrey    = ${xrdb:color4}
 white       = ${xrdb:color15}
 
 
@@ -41,39 +41,40 @@ padding-left = 2
 
 font-0 = Iosevka:size=20;4
 font-1 = Material Icons:size=18;6
-font-2 = Font Awesome:size=16;4
-;font-3 = Noto Emoji:size=14;3
+; font-2 = Font Awesome:size=16;4
 
 modules-left = bspwm
 modules-center =
-modules-right = volume backlight wlan filesystem battery date
+modules-right = volume backlight network keyboard filesystem battery date
 
 
 
 [bar/bottom_ext]
 monitor      = HDMI1
 width        = 100%
-height       = 32
+height       = 40
 bottom       = true
 fixed-center = true
+
+cursor-click = pointer
 
 foreground   = ${color.white}
 background-0 = ${color.bg-0}
 background-1 = ${color.bg-1}
 
-line-size    = 2
+line-size    = 1
 
 module-margin-left = 2
 padding-right = 3
 padding-left = 2
 
-font-0 = Iosevka:size=20;4
-font-1 = Material Icons:size=18;5
-;font-3 = Noto Emoji:size=14;3
+font-0 = Iosevka:size=11;4
+font-1 = Material Icons:size=11;5
+; font-2 = Font Awesome:size=18;4
 
 modules-left = bspwm
 modules-center =
-modules-right = date
+modules-right = volume backlight network keyboard filesystem battery date
 
 
 
@@ -91,7 +92,7 @@ ws-icon-2       = 3;
 ws-icon-3       = 4;
 ws-icon-4       = 5;
 ws-icon-5       = 6;
-ws-icon-default = 
+ws-icon-default = 
 
 format = <label-state> <label-mode>
 
@@ -184,20 +185,14 @@ poll-interval = 5
 time-format = %H:%M
 
 format-charging = <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
+format-discharging = <label-discharging>
 format-full = <label-full>
 
-label-charging =  %time% ┊ %percentage%%
+label-charging =  %time% ┊ %percentage%%
 
-label-discharging = %time% ┊ %percentage%%
+label-discharging =  %time% ┊ %percentage%%
 
-label-full =  full
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+label-full =  full
 
 
 
@@ -211,10 +206,10 @@ label =  %percentage%
 
 
 [module/volume]
-type = internal/volume
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1f.3.analog-stereo
 
 format-volume = <label-volume>
-;format-volume = <ramp-volume> <label-volume>
 format-muted = <label-muted>
 
 label-volume =  %percentage%
@@ -239,7 +234,7 @@ label-unmounted-foreground = ${color.darkgrey}
 
 
 
-[module/wlan]
+[module/network]
 type = internal/network
 interface = wlp2s0
 interval = 5

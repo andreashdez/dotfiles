@@ -24,6 +24,7 @@ Plug 'vim-syntastic/syntastic'
 " Look and feel
 Plug 'vim-airline/vim-airline'
 Plug 'dylanaraps/wal.vim'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
@@ -142,11 +143,11 @@ vnoremap j gj
 vnoremap k gk
 
 
-" Easily move to start/end of line
-nnoremap H 0
-nnoremap L $
-vnoremap H 0
-vnoremap L $
+" " Easily move to start/end of line
+" nnoremap H 0
+" nnoremap L $
+" vnoremap H 0
+" vnoremap L $
 
 
 " Move between buffers

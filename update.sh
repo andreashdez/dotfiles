@@ -2,6 +2,7 @@
 
 cp $HOME/.bin/* ./bin/
 
+cp -r $HOME/.config/alacritty/ ./config/
 cp -r $HOME/.config/bspwm/ ./config/
 cp -r $HOME/.config/compton/ ./config/
 cp -r $HOME/.config/dunst/ ./config/
@@ -20,3 +21,4 @@ cp $HOME/.weechat/buffers.conf $HOME/.weechat/weechat.conf ./weechat/
 
 cp $HOME/.xinitrc xinitrc
 cp $HOME/.Xresources Xresources
+

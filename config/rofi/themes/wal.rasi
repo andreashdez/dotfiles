@@ -8,8 +8,8 @@
 
 
 * {
-    bg:                 #25292c;
-    fg:                 #cdddd9aa;
+    bg:                 #222326;
+    fg:                 #c7c8c8;
 
     background-color:   @bg;
     text-color:         @fg;
