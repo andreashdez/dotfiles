@@ -14,7 +14,6 @@ hyperlinks          = true
 cursor_blink        = off
 cursor_shape        = block
 dynamic_title       = true
-# font                = scientifica 11
 font                = Iosevka Term 12
 mouse_autohide      = true
 scrollback_lines    = 10000

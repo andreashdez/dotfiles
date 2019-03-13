@@ -20,7 +20,7 @@ rofi.matching:          fuzzy
 ! Layout
 
 rofi.auto-select:       true
-rofi.dpi:               200
+! rofi.dpi:               200
 rofi.theme:             themes/wal.rasi
 
 

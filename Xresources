@@ -9,7 +9,7 @@ Xft.autohint:           true
 Xft.hintstyle:          hintfull
 Xft.lcdfilter:          lcddefault
 
-Xcursor.theme:          capitaine-cursors
+Xcursor.theme:          capitaine-cursors-light
 ! Xcursor.theme:          Paper
 
 ! urxvt.scrollBar:        false

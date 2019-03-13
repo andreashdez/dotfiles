@@ -1,13 +1,13 @@
 #!/bin/sh
 
-export TERM=xterm-256color
-export EDITOR=nvim
-export PAGER=most
-export MANPAGER=$PAGER
-export BROSWER=firefox
-export PATH=$PATH:$HOME/go/bin:$HOME/.local/bin
-export GOPATH=$HOME/go
-export MOZ_USE_XINPUT2=1
+# export TERM=xterm-256color
+# export EDITOR=nvim
+# export PAGER=most
+# export MANPAGER=$PAGER
+# export BROSWER=firefox
+# export PATH=$PATH:$HOME/go/bin:$HOME/.local/bin
+# export GOPATH=$HOME/go
+# export MOZ_USE_XINPUT2=1
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 

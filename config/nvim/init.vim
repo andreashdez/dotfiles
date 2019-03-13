@@ -17,9 +17,10 @@ Plug 'scrooloose/nerdcommenter'
 
 " Some enhancements
 Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
+" Plug 'vim-syntastic/syntastic'
 
 " Look and feel
 Plug 'vim-airline/vim-airline'
@@ -36,24 +37,24 @@ call plug#end()
 let g:airline_section         =''
 let g:airline_detect_paste    =1
 let g:airline_powerline_fonts =1
-let g:airline_left_sep        ='▒'
-let g:airline_right_sep       ='▒'
+let g:airline_left_sep        =''
+let g:airline_right_sep       =''
 let g:airline_left_alt_sep    =''
 let g:airline_right_alt_sep   =''
 let g:airline_section_z       =airline#section#create(['%3l', ':%-3v', ' ┊ %3p%%'])
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 
 
-" Syntastic stuff
-set statusline +=%#warningmsg#
-set statusline +=%{SyntasticStatuslineFlage()}
-set statusline +=%*
+" " Syntastic stuff
+" set statusline +=%#warningmsg#
+" set statusline +=%{SyntasticStatuslineFlage()}
+" set statusline +=%*
 
 
-" Syntastic config
-let g:syntastic_always_populate_loc_list =1
-let g:syntastic_check_on_open            =1
-let g:syntastic_check_on_wq              =0
+" " Syntastic config
+" let g:syntastic_always_populate_loc_list =1
+" let g:syntastic_check_on_open            =1
+" let g:syntastic_check_on_wq              =0
 
 
 " NerdCommenter config
@@ -141,13 +142,6 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
-
-
-" " Easily move to start/end of line
-" nnoremap H 0
-" nnoremap L $
-" vnoremap H 0
-" vnoremap L $
 
 
 " Move between buffers
