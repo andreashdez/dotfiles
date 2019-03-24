@@ -7,7 +7,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " Language support
-Plug 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " Plug 'lervag/vimtex'
 
 " Easier code editing
@@ -17,10 +17,10 @@ Plug 'scrooloose/nerdcommenter'
 
 " Some enhancements
 Plug 'scrooloose/nerdtree'
-" Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'w0rp/ale'
-" Plug 'vim-syntastic/syntastic'
+Plug 'junegunn/vim-easy-align'
+Plug '/usr/bin/fzf'
 
 " Look and feel
 Plug 'vim-airline/vim-airline'
@@ -43,18 +43,6 @@ let g:airline_left_alt_sep    =''
 let g:airline_right_alt_sep   =''
 let g:airline_section_z       =airline#section#create(['%3l', ':%-3v', ' ┊ %3p%%'])
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
-
-
-" " Syntastic stuff
-" set statusline +=%#warningmsg#
-" set statusline +=%{SyntasticStatuslineFlage()}
-" set statusline +=%*
-
-
-" " Syntastic config
-" let g:syntastic_always_populate_loc_list =1
-" let g:syntastic_check_on_open            =1
-" let g:syntastic_check_on_wq              =0
 
 
 " NerdCommenter config
@@ -85,6 +73,10 @@ let g:NERDTreeIndicatorMapCustom = {
 let g:strip_whitespace_on_save      =1
 let g:show_spaces_that_precede_tabs =1
 
+
+" EasyAlign mappings
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
 
 " -------------------------------------
 " NeoVim settings

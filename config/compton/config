@@ -4,26 +4,18 @@
 
 
 
-backend = "glx";
-paint-on-overlay = true;
-glx-no-stencil = true;
+backend              = "glx";
+glx-no-stencil       = true;
 glx-no-rebind-pixmap = true;
-unredir-if-possible = true;
-vsync = "opengl-swc";
+unredir-if-possible  = true;
+vsync                = true;
 
 
 
 # Shadows
-shadow = true;
-no-dock-shadow = true;
-no-dnd-shadow = true;
-clear-shadow = true;
-#shadow-radius = 16;
-#shadow-offset-x = -4;
-#shadow-offset-y = -4;
+shadow               = true;
 shadow-ignore-shaped = true;
-#shadow-exclude-reg = "x48+0-0";
-shadow-exclude = [
+shadow-exclude       = [
     "name = 'noshadow'",
     "name = 'Notification'",
     "_GTK_FRAME_EXTENDS@:c"
@@ -32,30 +24,30 @@ shadow-exclude = [
 
 
 # Opacity
-menu-opacity = 0.95;
-inactive-opacity = 0.95;
+inactive-opacity          = 0.95;
 inactive-opacity-override = true;
-alpha-step = 0.06
-detect-client-opacity = true;
-inactive-dim = 0.1;
-inactive-dim-fixed = true;
+detect-client-opacity     = true;
+inactive-dim              = 0.1;
+inactive-dim-fixed        = true;
 
 
 
 # Fading
-fading = true;
-fade-delta = 2;
-fade-in-step = 0.05;
+fading        = true;
+fade-delta    = 2;
+fade-in-step  = 0.05;
 fade-out-step = 0.05;
 
 
 
 # Specific window type
 wintypes: {
-    tooltip         = { fade = true; shadow = false; opacity = 0.98; focus = true; };
-    menu            = { fade = true; shadow = false; opacity = 0.98; focus = true; };
-    dropdown_menu   = { fade = true; shadow = false; opacity = 0.98; focus = true; };
-    popup_menu      = { fade = true; shadow = false; opacity = 0.98; focus = true; };
-    utility         = { fade = true; shadow = false; opacity = 0.98; focus = true; };
+    dnd           = { shadow = false; }
+    dock          = { shadow = false; };
+    tooltip       = { fade = true; shadow = false; opacity = 0.98; focus = true; };
+    menu          = { fade = true; shadow = false; opacity = 0.98; focus = true; };
+    dropdown_menu = { fade = true; shadow = false; opacity = 0.98; focus = true; };
+    popup_menu    = { fade = true; shadow = false; opacity = 0.98; focus = true; };
+    utility       = { fade = true; shadow = false; opacity = 0.98; focus = true; };
 };
 

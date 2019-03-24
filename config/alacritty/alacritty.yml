@@ -26,8 +26,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 48
-    y: 48
+    x: 32
+    y: 32
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
@@ -86,7 +86,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    family: Iosevka term
+    family: Iosevka
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -97,7 +97,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Iosevka term
+    family: Iosevka
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -108,13 +108,13 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Iosevka term
+    family: Iosevka
 
     # The `style` can be specified to pick a specific face.
     style: Italic
 
   # Point size
-  size: 9.5
+  size: 8.5
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -127,7 +127,7 @@ font:
   # increasing `y` moves the glyph upwards.
   glyph_offset:
     x: 0
-    y: 2
+    y: 0
 
   # Thin stroke font rendering (macOS only)
   #

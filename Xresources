@@ -10,13 +10,6 @@ Xft.hintstyle:          hintfull
 Xft.lcdfilter:          lcddefault
 
 Xcursor.theme:          capitaine-cursors-light
-! Xcursor.theme:          Paper
-
-! urxvt.scrollBar:        false
-! urxvt.font:             xft:Iosevka Term:pixelsize=34
-! urxvt.internalBorder:   48
-! XTerm*font:             xft:Iosevka-Term*12
-! XTerm*internalBorder:   48
 
 ! 2bwm (testing)
 ! twobwm.border_width: 4
