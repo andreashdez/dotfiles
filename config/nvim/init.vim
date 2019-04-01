@@ -8,6 +8,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Language support
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'dag/vim-fish', { 'for': 'fish' }
+Plug 'posva/vim-vue', { 'for': 'vue' }
 " Plug 'lervag/vimtex'
 
 " Easier code editing
@@ -21,6 +23,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'w0rp/ale'
 Plug 'junegunn/vim-easy-align'
 Plug '/usr/bin/fzf'
+Plug 'easymotion/vim-easymotion'
 
 " Look and feel
 Plug 'vim-airline/vim-airline'
@@ -90,6 +93,7 @@ set autowrite
 set shortmess  =oOstTI
 set mouse      =a
 set noshowmode
+set lazyredraw
 
 
 " Remove underlining (decorations)
