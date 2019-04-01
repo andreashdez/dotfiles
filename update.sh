@@ -14,6 +14,7 @@ cp -r $HOME/.config/termite/ ./config/
 cp -r $HOME/.config/zathura/ ./config/
 cp $HOME/.config/mpd/mpd.conf ./config/mpd/
 cp $HOME/.config/nvim/init.vim ./config/nvim/
+cp $HOME/.config/fish/config.fish ./config/fish/
 cp $HOME/.config/systemd/user/*.service ./config/systemd/user/
 cp $HOME/.config/systemd/user/*.timer ./config/systemd/user/
 
