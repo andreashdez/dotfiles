@@ -7,12 +7,12 @@
     border-radius: 0;
     font-family: FontAwesome, Iosevka, monospace;
     font-size: 14px;
-    color: white;
     min-height: 0;
     background: transparent;
 }
 
 window#waybar {
+    color: white;
     border-bottom: 2px solid #64727D;
 }
 
@@ -28,8 +28,8 @@ window#waybar {
 #workspaces button {
     padding: 0 5px;
     margin: 0 2px;
-    border-bottom: 2px solid #64727D;
     color: #64727D;
+    border-bottom: 2px solid #64727D;
 }
 
 #workspaces button.focused {
