@@ -11,6 +11,7 @@ cp -r $HOME/.config/polybar/ ./config/
 cp -r $HOME/.config/rofi/ ./config/
 cp -r $HOME/.config/sxhkd/ ./config/
 cp -r $HOME/.config/sway/ ./config/
+cp -r $HOME/.config/swaylock/ ./config/
 cp -r $HOME/.config/termite/ ./config/
 cp -r $HOME/.config/waybar/ ./config/
 cp -r $HOME/.config/zathura/ ./config/
@@ -22,6 +23,7 @@ cp $HOME/.config/systemd/user/*.timer ./config/systemd/user/
 
 cp $HOME/.weechat/buffers.conf $HOME/.weechat/weechat.conf ./weechat/
 
+cp $HOME/.bash_profile bash_profile
 cp $HOME/.xinitrc xinitrc
 cp $HOME/.Xresources Xresources
 

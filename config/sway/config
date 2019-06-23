@@ -8,17 +8,18 @@ set $down j
 set $up k
 set $right l
 set $term termite -e fish
+set $term_two alacritty
 set $menu rofi -show drun
+set $lock swaylock
 
 ################################################################################
-set $lock 'swaylock -f -c 000000'
 gaps inner 20
 smart_borders on
 smart_gaps on
 default_border pixel
 ################################################################################
 
-output * background /home/andreas/Pictures/walls/silas-baisch-1657089-unsplash.jpg fill
+output * background $WALLPAPER fill
 # output * background /home/andreas/Pictures/wp.png fill
 # output eDP-1 scale 2
 output eDP-1 disable
@@ -39,12 +40,12 @@ input "1739:31251:DLL06E4:01_06CB:7A13_Touchpad" {
 }
 
 bindsym $mod+Return exec $term
-bindsym $mod+Shift+Return exec alacritty
-bindsym $mod+w kill
+bindsym $mod+Shift+Return exec $term_two
 bindsym $mod+space exec $menu
-bindsym $mod+Shift+e $lock
+bindsym $mod+Shift+e exec $lock
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+q exit
+bindsym $mod+w kill
 
 floating_modifier $mod normal
 
