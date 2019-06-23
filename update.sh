@@ -10,7 +10,9 @@ cp -r $HOME/.config/ncmpcpp/ ./config/
 cp -r $HOME/.config/polybar/ ./config/
 cp -r $HOME/.config/rofi/ ./config/
 cp -r $HOME/.config/sxhkd/ ./config/
+cp -r $HOME/.config/sway/ ./config/
 cp -r $HOME/.config/termite/ ./config/
+cp -r $HOME/.config/waybar/ ./config/
 cp -r $HOME/.config/zathura/ ./config/
 cp $HOME/.config/mpd/mpd.conf ./config/mpd/
 cp $HOME/.config/nvim/init.vim ./config/nvim/

@@ -1,14 +1,15 @@
-#!/bin/bash
+#!/bin/sh
 
-. "$HOME/.cache/wal/colors.sh"
+# shellcheck source=/home/andreas/.cache/wal/colors.sh
+. "$HOME"/.cache/wal/colors.sh
 
-bg_inside="${color4}44"
-bg_ver="${color3}44"
-bg_wrong="${color1}44"
-fg_ring="${color4}ff"
-fg_ver="${color3}ff"
-fg_wrong="${color1}ff"
-fg_action="${color1}ff"
+# bg_inside="${color4}44"
+# bg_ver="${color3}44"
+# bg_wrong="${color1}44"
+# fg_ring="${color4}ff"
+# fg_ver="${color3}ff"
+# fg_wrong="${color1}ff"
+# fg_action="${color1}ff"
 fg_text="${color4}ff"
 fg_text_str="${color7}ff"
 

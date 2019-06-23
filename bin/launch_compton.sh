@@ -2,5 +2,5 @@
 
 killall compton
 
-exec compton --config $HOME/.config/compton/config -b
+exec compton --config "$HOME"/.config/compton/config -b
 

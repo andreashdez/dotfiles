@@ -11,8 +11,8 @@
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 
-xrdb -merge $HOME/.cache/wal/colors.Xresources
-xrdb -merge $HOME/.Xresources
+xrdb -merge "$HOME/.cache/wal/colors.Xresources"
+xrdb -merge "$HOME/.Xresources"
 
 if xrandr | grep "HDMI1 connected"; then
 	xrandr --output eDP1 --off
@@ -31,8 +31,8 @@ setxkbmap -option "eurosign:e"
 
 wal -R
 
-$HOME/.bin/launch_compton.sh &
-$HOME/.bin/launch_polybar.sh &
+"$HOME/.bin/launch_compton.sh" &
+"$HOME/.bin/launch_polybar.sh" &
 
 redshift &
 
@@ -41,7 +41,7 @@ session=${1:-bspwm}
 case $session in
 	bspwm	) exec bspwm;;
 	2bwm	) 2bwm &;;
-	*		) exec $1;;
+	*		) exec "$1";;
 esac
 
 # 2bwm &

@@ -1,13 +1,13 @@
-#!/bin/bash
+#!/bin/sh
 
 
 
 case "$1" in
     lock)
-        $HOME/.bin/lock.sh
+        "$HOME"/.bin/lock.sh
         ;;
     suspend)
-        $HOME/.bin/lock.sh && systemctl suspend
+        "$HOME"/.bin/lock.sh && systemctl suspend
         ;;
     reboot)
         systemctl reboot

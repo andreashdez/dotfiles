@@ -1,0 +1,80 @@
+{
+    "position": "bottom",
+    "height": 30,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-right": ["pulseaudio", "network", "custom/fs_win", "custom/fs_linux", "battery", "clock"],
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "format": "{name}",
+        "format-icons": {
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+
+    "clock": {
+        "format": "{:%A %e ┊ %H:%M}",
+        "format-alt": "{:%A %e of %B ┊ %H:%M}",
+        "tooltip": false
+    },
+
+    "custom/fs_win": {
+        "format": "{} ",
+        "format-alt": "{percentage}% ",
+        "return-type": "json",
+        "interval": 120,
+        "exec": "~/.config/waybar/modules/storage.sh /mnt/ntfs/",
+        "tooltip": false
+    },
+
+    "custom/fs_linux": {
+        "format": "{} ",
+        "format-alt": "{percentage}% ",
+        "return-type": "json",
+        "interval": 120,
+        "exec": "~/.config/waybar/modules/storage.sh /",
+        "tooltip": false
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% {icon}",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
+    },
+
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-muted": "{volume}% ",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ""
+        },
+        "tooltip": false
+    }
+
+}
+

@@ -16,7 +16,7 @@ super + shift + Return
 	alacritty
 
 # program launcher
-super + @space
+super + space
 	rofi -modi "window,drun" -show drun
 
 # reload sxhk config file

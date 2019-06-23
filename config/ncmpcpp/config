@@ -52,8 +52,8 @@ visualizer_color ="white,blue,black,blue"
 
 # Look and feel ###############################################################
 
-playlist_disable_highlight_delay = 1
-message_delay_time = 1
+playlist_disable_highlight_delay = 3
+message_delay_time = 3
 
 song_columns_list_format = "(45)[red]{a|A} (8f)[white]{lr} (45)[blue]{tr}"
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Script used by systemd timer unit to notify low battery charge
 

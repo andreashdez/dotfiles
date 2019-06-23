@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'dag/vim-fish', { 'for': 'fish' }
 Plug 'posva/vim-vue', { 'for': 'vue' }
+" Plug 'kovetskiy/sxhkd-vim'
 " Plug 'lervag/vimtex'
 
 " Easier code editing
@@ -112,7 +113,8 @@ set formatoptions -=t
 
 " Indent configuration
 set shiftwidth =4
-set tabstop    =4
+set tabstop    =8
+set expandtab
 set cindent
 
 

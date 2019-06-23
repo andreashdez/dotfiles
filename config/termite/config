@@ -29,7 +29,6 @@ urgent_on_bell      = true
 
 background  = #222326
 foreground  = #c7c8c8
-cursor      = #c7c8c8
 color0      = #47474b
 color1      = #ad7189
 color2      = #a0bc93

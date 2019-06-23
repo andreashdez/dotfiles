@@ -7,7 +7,7 @@
 [color]
 bg-0        = #00000000
 bg-1        = #33000000
-darkgrey    = ${xrdb:color4}
+darkgrey    = ${xrdb:color6}
 white       = ${xrdb:color15}
 
 
