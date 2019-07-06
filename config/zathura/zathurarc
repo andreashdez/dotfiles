@@ -1,7 +1,0 @@
-
-set font            "Iosevka Term 11"
-set guioptions      ""
-set smooth-scroll   "true"
-
-unmap d
-
