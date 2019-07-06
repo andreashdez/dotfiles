@@ -1,14 +1,28 @@
-# dotfiles :wrench:
+# dotfiles
 
-This repo contains the dotfiles for my personal system setup. It includes some scripts and config files for the following applications:
+Some dotfiles for my personal system setup (still moving back and forth between Xorg and Wayland). The repository mainly includes config files and some scripts.
+
+## Xorg
 
 - Window manager: `bspwm` + `sxhkd`
 - Compositor: `compton`
 - Status bar: `polybar`
-- Terminal: `termite`
+- Notifications: `dunst`
+
+## Wayland
+
+- Window manager: `sway`
+- Status bar: `waybar`
+
+## Main programs
+
+- Terminal: `termite`, `alacritty`
+- Shell: `fish`
 - Editor: `neovim`
-- Web browser: `firefox`
 - Music player: `mpd` + `ncmpcpp`
 - Application launcher: `rofi`
 - Document viewer: `zathura`
-- Chat client: `weechat`
+
+## Repository config
+
+This dotfiles repository is configured as a git bare repository as described in [this Hacker News comment](https://news.ycombinator.com/item?id=11070797 "Hacker News").

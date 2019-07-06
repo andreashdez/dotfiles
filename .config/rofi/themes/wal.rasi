@@ -1,0 +1,109 @@
+/**
+ * ROFI Color theme
+ * ----------------------------------------
+ * A very simple theme, showing the ROFI menu
+ * in full-screen and with only two colours
+ *
+ */
+
+
+* {
+    bg:                 #222326;
+    fg:                 #c7c8c8;
+
+    background-color:   @bg;
+    text-color:         @fg;
+
+    normal-bg:          @bg;
+    normal-fg:          @fg;
+    sel-normal-bg:      @fg;
+    sel-normal-fg:      @bg;
+    alt-normal-bg:      @bg;
+    alt-normal-fg:      @fg;
+
+    font:               "Oswald 22";
+}
+
+
+
+#window {
+    padding:            38% 32% 38%;
+    fullscreen:         true;
+}
+
+
+
+#inputbar {
+    padding:            0px 20px 16px;
+    spacing:            8px;
+}
+
+
+
+#listview {
+    padding:            16px 0px 0px;
+    border:             2px dash 0px 0px;
+    border-color:       @fg;
+    cycle:              false;
+    scrollbar:          false;
+    spacing:            2px;
+}
+
+
+
+#element {
+    border:             0;
+    padding:            4px 20px 8px;
+}
+
+
+
+#element.normal.normal {
+    background-color:   @normal-bg;
+    text-color:         @normal-fg;
+}
+
+#element.selected.normal {
+    background-color:   @sel-normal-bg;
+    text-color:         @sel-normal-fg;
+}
+
+#element.alternate.normal {
+    background-color:   @alt-normal-bg;
+    text-color:         @alt-normal-fg;
+}
+
+
+
+#element.normal.active {
+    background-color:   @normal-bg;
+    text-color:         @normal-fg;
+}
+
+#element.selected.active {
+    background-color:   @sel-normal-bg;
+    text-color:         @sel-normal-fg;
+}
+
+#element.alternate.active {
+    background-color:   @alt-normal-bg;
+    text-color:         @alt-normal-fg;
+}
+
+
+
+#element.normal.urgent {
+    background-color:   @normal-bg;
+    text-color:         @normal-fg;
+}
+
+#element.selected.urgent {
+    background-color:   @sel-normal-bg;
+    text-color:         @sel-normal-fg;
+}
+
+#element.alternate.urgent {
+    background-color:   @alt-normal-bg;
+    text-color:         @alt-normal-fg;
+}
+
