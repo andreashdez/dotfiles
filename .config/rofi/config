@@ -27,5 +27,5 @@ rofi.theme:             themes/wal.rasi
 
 ! Pattern
 
-rofi.terminal:          termite
+rofi.terminal:          alacritty
 

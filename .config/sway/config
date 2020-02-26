@@ -3,26 +3,20 @@
 # Read `man 5 sway` for a complete reference.
 
 set $mod Mod4
+
 set $left h
 set $down j
 set $up k
 set $right l
-set $term termite -e fish
+set $term termite
 set $term_two alacritty
 set $menu rofi -show drun
 set $lock swaylock
 
-################################################################################
-gaps inner 20
-smart_borders on
-smart_gaps on
-default_border pixel
-################################################################################
-
 output * background $WALLPAPER fill
-# output eDP-1 scale 2
-output eDP-1 disable
-output HDMI-A-1
+output eDP-1 scale 2
+
+bindsym $mod+Shift+o output eDP-1 toggle
 
 input "1:1:AT_Translated_Set_2_keyboard" {
     xkb_layout gb,es
@@ -34,9 +28,20 @@ input "1241:402:USB-HID_Keyboard" {
 }
 input "1739:31251:DLL06E4:01_06CB:7A13_Touchpad" {
     tap enabled
-    natural_scroll enabled
     middle_emulation enabled
+    natural_scroll enabled
+    scroll_factor 0.20
 }
+
+client.focused          #66b3ff #66b3ff #0f111a #cc99ff #66b3ff
+client.focused_inactive #0f111a #0f111a #cccccc #cc99ff #0f111a
+client.unfocused        #0f111a #0f111a #cccccc #cc99ff #0f111a
+client.urgent           #ff526f #ff526f #0f111a #cc99ff #ff526f
+
+smart_borders on
+default_border pixel
+
+floating_modifier $mod normal
 
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+Return exec $term_two
@@ -45,10 +50,12 @@ bindsym $mod+Shift+e exec $lock
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+q exit
 bindsym $mod+Shift+s exec $HOME/.bin/quit.sh shutdown
+bindsym $mod+Ctrl+Shift+s exec $HOME/.bin/quit.sh suspend
 bindsym $mod+Shift+r exec $HOME/.bin/quit.sh reboot
 bindsym $mod+w kill
 
-floating_modifier $mod normal
+bindsym $mod+Shift+m gaps inner current plus 20
+bindsym $mod+Shift+n gaps inner current set 0
 
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
@@ -59,33 +66,33 @@ bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+1 workspace " 1 "
+bindsym $mod+2 workspace " 2 "
+bindsym $mod+3 workspace " 3 "
+bindsym $mod+4 workspace " 4 "
+bindsym $mod+5 workspace " 5 "
+bindsym $mod+6 workspace " 6 "
+bindsym $mod+7 workspace " 7 "
+bindsym $mod+8 workspace " 8 "
+bindsym $mod+9 workspace " 9 "
+bindsym $mod+0 workspace " 0 "
+bindsym $mod+Shift+1 move container to workspace " 1 "
+bindsym $mod+Shift+2 move container to workspace " 2 "
+bindsym $mod+Shift+3 move container to workspace " 3 "
+bindsym $mod+Shift+4 move container to workspace " 4 "
+bindsym $mod+Shift+5 move container to workspace " 5 "
+bindsym $mod+Shift+6 move container to workspace " 6 "
+bindsym $mod+Shift+7 move container to workspace " 7 "
+bindsym $mod+Shift+8 move container to workspace " 8 "
+bindsym $mod+Shift+9 move container to workspace " 9 "
+bindsym $mod+Shift+0 move container to workspace " 0 "
 
 bindsym $mod+b splith
 bindsym $mod+v splitv
 # bindsym $mod+s layout stacking
 # bindsym $mod+e layout toggle split
 bindsym $mod+f fullscreen
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+f floating toggle
 # bindsym $mod+a focus parent
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
@@ -94,10 +101,6 @@ bindsym XF86AudioMute exec --no-startup-id pamixer -t
 
 for_window [class="imv"] floating enable
 for_window [app_id="imv"] floating enable
-for_window [class="qimgv"] floating enable
-for_window [app_id="qimgv"] floating enable
-for_window [app_id="pqiv"] floating enable
-for_window [app_id="vimiv"] floating enable
 for_window [app_id="eog"] floating enable
 
 mode "resize" {
@@ -111,8 +114,34 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+set $fg      #ccccccff
+set $bg      #0f111acc
+set $black   #292933
+set $red     #ff526fcc
+set $green   #9ce677
+set $yellow  #ffcc66cc
+set $blue    #66b3ffcc
+set $magenta #cc99ff
+set $cyan    #66e6ff88
+set $white   #cccccc44
+
 bar {
-    swaybar_command waybar
+    swaybar_command swaybar
+    font "Iosevka 10"
+    height 31
+    mode hide
+    modifier $mod
+    status_command while "$HOME/.bin/status.sh"; do sleep 1; done
+    colors {
+        background $bg
+        statusline $fg
+        separator $fg
+        focused_workspace $blue $blue $bg
+        active_workspace $blue $bg $fg
+        inactive_workspace $bg $bg $fg
+        urgent_workspace $red $red $bg
+        binding_mode $yellow $yellow $bg
+    }
 }
 
 include /usr/local/etc/sway/config.d/*

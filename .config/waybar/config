@@ -1,6 +1,7 @@
 {
+    "layer": "top",
     "position": "bottom",
-    "height": 30,
+    "height": 32,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-right": ["pulseaudio", "network", "custom/fs_win", "custom/fs_linux", "battery", "clock"],
 

@@ -7,7 +7,7 @@ case "$1" in
         "$HOME"/.bin/lock.sh
         ;;
     suspend)
-        "$HOME"/.bin/lock.sh && systemctl suspend
+        systemctl suspend
         ;;
     reboot)
         systemctl reboot

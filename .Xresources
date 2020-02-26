@@ -23,3 +23,40 @@ twobwm.fixed_unkill_color: #25282C
 ! twobwm.inverted_colors: false
 twobwm.enable_compton: true
 
+! special
+*.foreground:   #fcfcfc
+*.background:   #1d1f26
+*.cursorColor:  #fcfcfc
+
+! black
+*.color0:       #282a36
+*.color8:       #414458
+
+! red
+*.color1:       #ff526f
+*.color9:       #ff8599
+
+! green
+*.color2:       #9ce677
+*.color10:      #bbe6a5
+
+! yellow
+*.color3:       #ffcc66
+*.color11:      #ffda85
+
+! blue
+*.color4:       #66b3ff
+*.color12:      #99ccff
+
+! magenta
+*.color5:       #cc99ff
+*.color13:      #dbb8ff
+
+! cyan
+*.color6:       #66e6ff
+*.color14:      #99eeff
+
+! white
+*.color7:       #cccccc
+*.color15:      #fcfcfc
+

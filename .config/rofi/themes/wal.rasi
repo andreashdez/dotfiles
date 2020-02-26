@@ -8,8 +8,8 @@
 
 
 * {
-    bg:                 #222326;
-    fg:                 #c7c8c8;
+    bg:                 #0f111a;
+    fg:                 #cccccc;
 
     background-color:   @bg;
     text-color:         @fg;
@@ -21,26 +21,26 @@
     alt-normal-bg:      @bg;
     alt-normal-fg:      @fg;
 
-    font:               "Oswald 22";
+    font:               "IBM Plex Sans Condensed Medium 20";
 }
 
 
 
-#window {
+window {
     padding:            38% 32% 38%;
     fullscreen:         true;
 }
 
 
 
-#inputbar {
+inputbar {
     padding:            0px 20px 16px;
     spacing:            8px;
 }
 
 
 
-#listview {
+listview {
     padding:            16px 0px 0px;
     border:             2px dash 0px 0px;
     border-color:       @fg;
@@ -51,58 +51,59 @@
 
 
 
-#element {
+element {
     border:             0;
-    padding:            4px 20px 8px;
+    padding:            8px 20px 8px;
+    highlight:          underline;
 }
 
 
 
-#element.normal.normal {
+element normal normal {
     background-color:   @normal-bg;
     text-color:         @normal-fg;
 }
 
-#element.selected.normal {
+element selected normal {
     background-color:   @sel-normal-bg;
     text-color:         @sel-normal-fg;
 }
 
-#element.alternate.normal {
+element alternate normal {
     background-color:   @alt-normal-bg;
     text-color:         @alt-normal-fg;
 }
 
 
 
-#element.normal.active {
+element normal active {
     background-color:   @normal-bg;
     text-color:         @normal-fg;
 }
 
-#element.selected.active {
+element selected active {
     background-color:   @sel-normal-bg;
     text-color:         @sel-normal-fg;
 }
 
-#element.alternate.active {
+element alternate active {
     background-color:   @alt-normal-bg;
     text-color:         @alt-normal-fg;
 }
 
 
 
-#element.normal.urgent {
+element normal urgent {
     background-color:   @normal-bg;
     text-color:         @normal-fg;
 }
 
-#element.selected.urgent {
+element selected urgent {
     background-color:   @sel-normal-bg;
     text-color:         @sel-normal-fg;
 }
 
-#element.alternate.urgent {
+element alternate urgent {
     background-color:   @alt-normal-bg;
     text-color:         @alt-normal-fg;
 }
