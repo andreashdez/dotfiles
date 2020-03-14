@@ -95,6 +95,12 @@ bindsym $mod+f fullscreen
 bindsym $mod+Shift+f floating toggle
 # bindsym $mod+a focus parent
 
+# bindsym XF86MonBrightnessUp exec --no-startup-id brillo -A 50
+# bindsym XF86MonBrightnessDown exec --no-startup-id brillo -S 0
+
+bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/.bin/brillo.sh -A 5
+bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/.bin/brillo.sh -U 5
+
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
 bindsym XF86AudioMute exec --no-startup-id pamixer -t
@@ -127,7 +133,9 @@ set $white   #cccccc44
 
 bar {
     swaybar_command swaybar
-    font "Iosevka 10"
+    # font "Iosevka 10"
+    # font "Roboto Condensed Bold 10"
+    font "Roboto Condensed, Font Awesome 5 Free, Bold 10"
     height 31
     mode hide
     modifier $mod
