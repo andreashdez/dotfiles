@@ -139,7 +139,7 @@ bar {
     height 31
     mode hide
     modifier $mod
-    status_command while "$HOME/.bin/status.sh"; do sleep 1; done
+    status_command while "$HOME/.local/bin/status.sh"; do sleep 1; done
     colors {
         background $bg
         statusline $fg
