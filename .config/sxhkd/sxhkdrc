@@ -11,9 +11,9 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	termite
 super + shift + Return
-	termite -e fish
+	alacritty
 
 # program launcher
 super + space

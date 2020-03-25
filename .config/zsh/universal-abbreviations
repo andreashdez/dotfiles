@@ -2,6 +2,7 @@
 abbr --add --universal -- l exa -la
 abbr --add --universal -- ll exa -l
 abbr --add --universal vi nvim
+abbr --add --universal top ytop
 abbr --add --universal hh history | sk
 abbr --add --universal abr antibody bundle < ~/.zsh_plugins > ~/.zsh_plugins.sh
 
