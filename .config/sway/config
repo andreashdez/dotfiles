@@ -49,9 +49,9 @@ bindsym $mod+space exec $menu
 bindsym $mod+Shift+e exec $lock
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+q exit
-bindsym $mod+Shift+s exec $HOME/.bin/quit.sh shutdown
-bindsym $mod+Ctrl+Shift+s exec $HOME/.bin/quit.sh suspend
-bindsym $mod+Shift+r exec $HOME/.bin/quit.sh reboot
+bindsym $mod+Shift+s exec $HOME/.local/bin/quit.sh shutdown
+bindsym $mod+Ctrl+Shift+s exec $HOME/.local/bin/quit.sh suspend
+bindsym $mod+Shift+r exec $HOME/.local/bin/quit.sh reboot
 bindsym $mod+w kill
 
 bindsym $mod+Shift+m gaps inner current plus 20
@@ -98,8 +98,8 @@ bindsym $mod+Shift+f floating toggle
 # bindsym XF86MonBrightnessUp exec --no-startup-id brillo -A 50
 # bindsym XF86MonBrightnessDown exec --no-startup-id brillo -S 0
 
-bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/.bin/brillo.sh -A 5
-bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/.bin/brillo.sh -U 5
+bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/.local/bin/brillo.sh -A 5
+bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/.local/bin/brillo.sh -U 5
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5

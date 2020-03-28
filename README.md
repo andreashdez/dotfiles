@@ -12,12 +12,12 @@ Some dotfiles for my personal system setup (still moving back and forth between 
 ## Wayland
 
 - Window manager: `sway`
-- Status bar: `waybar`
+- Status bar: `swaybar`
 
 ## Main programs
 
 - Terminal: `termite`, `alacritty`
-- Shell: `fish`
+- Shell: `fish`, tending more towards `zsh`
 - Editor: `neovim`
 - Music player: `mpd` + `ncmpcpp`
 - Application launcher: `rofi`
