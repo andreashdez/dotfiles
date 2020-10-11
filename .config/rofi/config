@@ -22,6 +22,7 @@ rofi.matching:          fuzzy
 rofi.auto-select:       true
 ! rofi.dpi:               200
 rofi.theme:             themes/wal.rasi
+! rofi.theme:             themes/darker-than-black_v3.rasi
 
 
 

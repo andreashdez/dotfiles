@@ -224,18 +224,18 @@ colors:
   # Normal colors
   normal:
     black:   '#292933'
-    red:     '#ff526f'
-    green:   '#9ce677'
+    red:     '#ee5588'
+    green:   '#aaee77'
     yellow:  '#ffcc66'
-    blue:    '#66b3ff'
+    blue:    '#66bbff'
     magenta: '#cc99ff'
-    cyan:    '#66e6ff'
+    cyan:    '#66ddff'
     white:   '#cccccc'
 
   # Bright colors
   bright:
     black:   '#525266'
-    red:     '#ff8599'
+    red:     '#ff6699'
     green:   '#bbe6a5'
     yellow:  '#ffda85'
     blue:    '#99ccff'
@@ -357,10 +357,10 @@ cursor:
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
-#  args:
-#    - --login
+shell:
+ program: /bin/fish
+ args:
+   - --login
 
 # Startup directory
 #
