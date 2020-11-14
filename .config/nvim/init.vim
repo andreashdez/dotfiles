@@ -171,7 +171,7 @@ set autoindent
 
 
 " Fix broken terminal cursor
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
+autocmd VimLeave * set guicursor=a:ver25
 
 
 set nocompatible
