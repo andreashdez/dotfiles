@@ -8,9 +8,9 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term termite
-set $term_two alacritty
-set $menu rofi -show drun
+set $term alacritty
+# set $menu rofi -show drun
+set $menu wofi
 # set $menu wofi --allow-images --allow-markup --hide-scroll
 set $lock swaylock
 
@@ -59,7 +59,6 @@ default_border pixel
 floating_modifier $mod normal
 
 bindsym $mod+Return exec $term
-bindsym $mod+Shift+Return exec $term_two
 bindsym $mod+space exec $menu
 bindsym $mod+Shift+e exec $lock
 bindsym $mod+Shift+c reload
