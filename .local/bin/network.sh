@@ -1,6 +1,7 @@
 #!/bin/sh
 
 nmcli con show --active \
-    | tail -n +2 \
+    | tail --lines=+2 \
+    | head --lines=-1 \
     | awk '{ print $1 }'
 

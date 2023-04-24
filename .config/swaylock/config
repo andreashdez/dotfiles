@@ -1,9 +1,11 @@
-
 font=Iosevka
+
+image=~/images/wallhaven-jxwwe5.png
+scaling=fill
 
 indicator-caps-lock
 indicator-radius=80
-indicator-thickness=14
+indicator-thickness=8
 
 color=000000
 

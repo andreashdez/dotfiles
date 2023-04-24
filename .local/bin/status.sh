@@ -2,7 +2,7 @@
 
 printf " %s       %s      %s      %s      %s   ┊  %s   " \
     "$(brillo)" \
-    "$(pamixer --get-volume-human)" \
+    "$("$HOME/.local/bin/volume_status.sh")" \
     "$("$HOME/.local/bin/network.sh")" \
     "$("$HOME/.local/bin/battery_charge.sh")" \
     "$("$HOME/.local/bin/disk_space.sh")" \

@@ -1,25 +1,34 @@
 
-## SETTINGS
+if status is-interactive
 
-set fish_greeting
+  # fish_add_path "/home/andreas/.local/bin/"
 
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+  # set --export PAGER /usr/bin/most
+  set --export PAGER /usr/bin/moar
+  set --export MOAR '--no-linenumbers --statusbar=inverse --style=vulcan'
 
-abbr --add --global ll 'exa -l'
-abbr --add --global llr 'exa -lR'
-abbr --add --global lla 'exa -la'
-abbr --add --global vi 'nvim'
-abbr --add --global hh 'history | sk'
+  set fish_greeting
 
-# set --global --export --path PATH "$PATH:$HOME/.cache/cargo/bin:$HOME/.go/bin:$HOME/.local/bin"
+  set fish_color_command white --bold
 
-set --global fish_cursor_default block
-set --global fish_cursor_insert line
-set --global fish_cursor_visual underscore
+  set fish_cursor_default block
+  set fish_cursor_insert line
+  set fish_cursor_visual underscore
 
-set --global fish_color_command white --bold
+  fish_vi_key_bindings
 
-set --global tide_right_prompt_suffix ' '
+  abbr --add ll 'exa -l'
+  abbr --add llr 'exa -lR'
+  abbr --add lla 'exa -la'
+  abbr --add vi 'lvim'
+  abbr --add hh 'history | sk'
 
-fish_vi_key_bindings
+  alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+end
+
+function tere
+  set --local result (command tere $argv)
+  [ -n "$result" ] && cd -- "$result"
+end
 

@@ -1,4 +1,4 @@
 #!/bin/sh
 
-pkexec /usr/bin/brillo -u 200000 "$1" "$2"
+pkexec /usr/bin/brillo -u 150000 "$1" "$2"
 
