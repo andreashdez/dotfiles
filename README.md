@@ -1,13 +1,6 @@
 # dotfiles
 
-Some dotfiles for my personal system setup (still moving back and forth between Xorg and Wayland). The repository mainly includes config files and some scripts.
-
-## Xorg
-
-- Window manager: `bspwm` + `sxhkd`
-- Compositor: `compton`
-- Status bar: `polybar`
-- Notifications: `dunst`
+Some dotfiles for my personal system setup (mainly on Sway for now). The repository mainly includes config files and some scripts.
 
 ## Wayland
 
@@ -16,11 +9,11 @@ Some dotfiles for my personal system setup (still moving back and forth between 
 
 ## Main programs
 
-- Terminal: `termite`, `alacritty`
-- Shell: `fish`, tending more towards `zsh`
-- Editor: `neovim`
+- Terminal: `alacritty`
+- Shell: `fish`
+- Editor: `neovim`, using [LunarVim](https://www.lunarvim.org/)
 - Music player: `mpd` + `ncmpcpp`
-- Application launcher: `rofi`
+- Application launcher: `yofi`
 - Document viewer: `zathura`
 
 ## Repository config
