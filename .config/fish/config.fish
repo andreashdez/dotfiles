@@ -1,9 +1,8 @@
 
 if status is-interactive
 
-  # fish_add_path "/home/andreas/.local/bin/"
+  fish_add_path "/home/andreas/.cargo/bin/"
 
-  # set --export PAGER /usr/bin/most
   set --export PAGER /usr/bin/moar
   set --export MOAR '--no-linenumbers --statusbar=inverse --style=vulcan'
 
@@ -24,6 +23,8 @@ if status is-interactive
   abbr --add hh 'history | sk'
 
   alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+  tmux_chooser
 
 end
 

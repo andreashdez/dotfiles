@@ -451,14 +451,9 @@ cursor:
 #   - (Linux/BSD/macOS) `$SHELL` or the user's login shell, if `$SHELL` is unset
 #   - (Windows) powershell
 shell:
-  program: /usr/bin/tmux
+  program: /usr/bin/fish
   args:
-    - new-session
-    - -A
-    - -D
-    - -s
-    - main
-    # - --login
+    - --login
 
 # Startup directory
 #
