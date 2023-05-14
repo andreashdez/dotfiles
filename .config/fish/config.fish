@@ -1,10 +1,9 @@
-
 if status is-interactive
-
   fish_add_path "/home/andreas/.cargo/bin/"
+  fish_add_path "/home/andreas/.local/bin/"
 
-  set --export PAGER /usr/bin/moar
-  set --export MOAR '--no-linenumbers --statusbar=inverse --style=vulcan'
+  #set --export PAGER /usr/bin/moar
+  #set --export MOAR '--no-linenumbers --statusbar=inverse --style=vulcan'
 
   set fish_greeting
 
@@ -14,8 +13,6 @@ if status is-interactive
   set fish_cursor_insert line
   set fish_cursor_visual underscore
 
-  fish_vi_key_bindings
-
   abbr --add ll 'exa -l'
   abbr --add llr 'exa -lR'
   abbr --add lla 'exa -la'
@@ -24,6 +21,7 @@ if status is-interactive
 
   alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+  fish_vi_key_bindings
   tmux_chooser
 
 end

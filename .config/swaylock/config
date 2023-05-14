@@ -1,8 +1,5 @@
 font=Iosevka
 
-image=~/Pictures/wallhaven-1pdqdv.jpg
-scaling=fill
-
 indicator-caps-lock
 indicator-radius=80
 indicator-thickness=8
