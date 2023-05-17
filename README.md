@@ -13,7 +13,7 @@ Some dotfiles for my personal system setup (mainly on Sway for now). The reposit
 - Shell: `fish`
 - Editor: `neovim`, using [LunarVim](https://www.lunarvim.org/)
 - Music player: `mpd` + `ncmpcpp`
-- Application launcher: `yofi`
+- Application launcher: `tofi`
 - Document viewer: `zathura`
 
 ## Repository config

@@ -2,9 +2,6 @@ if status is-interactive
   fish_add_path "/home/andreas/.cargo/bin/"
   fish_add_path "/home/andreas/.local/bin/"
 
-  #set --export PAGER /usr/bin/moar
-  #set --export MOAR '--no-linenumbers --statusbar=inverse --style=vulcan'
-
   set fish_greeting
 
   set fish_color_command white --bold
@@ -17,7 +14,7 @@ if status is-interactive
   abbr --add llr 'exa -lR'
   abbr --add lla 'exa -la'
   abbr --add vi 'lvim'
-  abbr --add hh 'history | sk'
+  abbr --add hh 'history | fzf'
 
   alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
